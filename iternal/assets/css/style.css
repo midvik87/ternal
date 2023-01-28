@@ -256,7 +256,7 @@ img {
     padding: 15px;
     transition: all 0.5s;
     opacity: 0.6;
-    background-image: url("iternal/assets/ico/arrow_b_upTop.svg");
+    background-image: url("../ico/arrow_b_upTop.svg");
     background-repeat: no-repeat;
     background-color: rgba(240, 240, 240, 0.4);
     /* background-size: cover; */
@@ -504,7 +504,7 @@ footer .container::after {
 }
 
 #home {
-    background-image: url(../iternal/assets/img/hero-bg.webp);
+    background-image: url(../img/hero-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .8);
