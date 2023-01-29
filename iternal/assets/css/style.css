@@ -935,10 +935,10 @@ form textarea {
     margin: 0.2rem 0;
     /* border: 1px solid var(--input-border); */
     /* border-radius: var(--input-radius); */
+    border: 1px solid var(--color-secondary);
     border-left: none;
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid var(--color-secondary);
     border-radius: 0;
     padding: 5px;
     outline: none;
@@ -1285,6 +1285,22 @@ form textarea:focus::placeholder {
 
     .hero-heading h1 {
         --text-h1: 125px;
+    }
+
+    .about-slider {
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    .about-slider-card {
+        min-width: auto;
+    }
+
+    figcaption {
+        padding-inline: 2rem;
+    }
+
+    figure {
+        margin-inline: 0;
     }
 
     .about-slider img {
