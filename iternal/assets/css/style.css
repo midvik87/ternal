@@ -237,7 +237,7 @@ img {
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth;
-        /* scroll-padding-top: 30px; */
+        scroll-padding-top: 30px;
     }
 }
 
