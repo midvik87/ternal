@@ -587,8 +587,9 @@ footer .container::after {
 }
 
 #about h3 {
+    --text-h3: 30px;
     font-weight: var(--font-w-bold);
-    line-height: 53px;
+    line-height: 42px;
     letter-spacing: -1px;
 }
 
@@ -908,11 +909,13 @@ address p:nth-child(2) a {
 
 address {
     font-style: normal;
+    text-align: center;
 }
 
 iframe {
     border: 1px solid rgba(211, 211, 211, 0.8);
     border-radius: var(--border-radius);
+    width: 80%;
 }
 
 form {
@@ -935,6 +938,7 @@ form textarea {
     border-top: none;
     border-right: none;
     border-bottom: 1px solid var(--color-secondary);
+    border-radius: 0;
     padding: 5px;
     outline: none;
     background-color: var(--color-primary);
@@ -945,8 +949,9 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
+    /* background-color: var(--color-primary-hover); */
     border-bottom: 1px solid var(--color-monet);
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 form input::placeholder,
@@ -970,12 +975,16 @@ form textarea:focus::placeholder {
 }
 
 .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    justify-content: center;
+    margin: 0;
 }
 
 .footer-links li {
-    padding: .5rem 0;
+    padding: 0.7rem;
 }
 
 .footer-links a {
@@ -998,9 +1007,10 @@ form textarea:focus::placeholder {
     text-decoration: none;
 }
 
-/* .footer-wrapper {
-    margin-top: 3rem;
-} */
+.footer-links a,
+.footer-bottom p {
+    font-size: var(--text-h5);
+}
 
 /* ********************************************** */
 /*                  RESPONSIVE                    */
@@ -1017,14 +1027,12 @@ form textarea:focus::placeholder {
         width: 100%;
     }
 
-    .footer-links ul {
-        display: flex;
-        justify-content: center;
-        margin: 0;
+    #about h3 {
+        line-height: 57px;
     }
 
-    .footer-links li {
-        padding: 0.7rem;
+    iframe {
+        width: 350px;
     }
 }
 
@@ -1099,6 +1107,10 @@ form textarea:focus::placeholder {
     address p:first-child {
         margin-top: 0;
     }
+
+    address {
+        text-align: left;
+    }    
 
     iframe {
         height: 200px;
@@ -1266,11 +1278,6 @@ form textarea:focus::placeholder {
         justify-content: center;
         gap: 10%;
     }
-
-    iframe {
-        width: 350px;
-    }
-
 }
 
 @media (min-width: 1200px) {
