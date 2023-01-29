@@ -927,6 +927,7 @@ form {
 form button {
     width: 120px;
     margin-inline: auto;
+    margin-top: 1rem;
 }
 
 form input,
