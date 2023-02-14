@@ -19,20 +19,11 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     toTopButton.style.display = "block";
     navig.style.backgroundColor = "var(--color-background-nav-mob)";
-    if (link.classList.contains('scrolled')) {
-      link.forEach(link => {
-        link.classList.remove('scrolled')
-      });
-    } else {
-      link.forEach(link => {
-        link.classList.remove('scrolled')
-      });
-    }
 
   } else {
     toTopButton.style.display = "none";
     navig.style.backgroundColor = "transparent";
-    navig.style.backdropFilter = "blur(10px)";
+    navig.style.backdropFilter = "blur(20px)";
   }
 }
 function topFunction() {
@@ -41,31 +32,6 @@ function topFunction() {
 }
 
 window.onscroll = function () { scrollFunction(); };
-
-// ACTIVE LINKS NAV
-
-const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll", navHighlighter);
-
-function navHighlighter() {
-  
-  let scrollY = window.pageYOffset;
-  
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 150;
-    sectionId = current.getAttribute("id");
-    
-    if (
-      scrollY > sectionTop &&
-      scrollY <= sectionTop + sectionHeight
-    ){
-      document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.add("active");
-    } else {
-      document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.remove("active");
-    }
-  });
-}
 
 // NAVIGATION
 const links = document.querySelectorAll(".nav-links li a");
@@ -131,72 +97,6 @@ hamburger.addEventListener('click', () => {
 
 });
 
-/******************************************/
-/* accordion */
-
-var accItem = document.getElementsByClassName("accordionItem");
-var accHD = document.getElementsByClassName("accordionItemHeading");
-var closeBtn = document.getElementById("closeBtn");
-var i;
-for (i = 0; i < accHD.length; i++) {
-  accHD[i].addEventListener("click", toggleItem, false);
-}
-
-function toggleItem() {
-  var itemClass = this.parentNode.className;
-  for (i = 0; i < accItem.length; i++) {
-    accItem[i].className = "accordionItem close";
-    closeBtn.style.display = 'none';
-  }
-  if (itemClass == "accordionItem close") {
-    this.parentNode.className = "accordionItem open";
-    closeBtn.style.display = 'block';
-  }
-}
-
-// document.getElementById('closeBtn').onclick = function(event){
-//   event.stopPropagation();
-// };​
-document.getElementById('closeBtn').onclick = function () {
-  var el = document.getElementById('closeBtn');
-  if (el.style.display == 'block') {
-    el.style.display = 'none';
-  }
-  else {
-    el.style.display = 'block';
-  };
-};
-/******************************************/
-/* HTML INCLUDES */
-
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-          if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
-  }
-};
-
 // FADE IN / OUT ELEMENTS
 
 const observerOptions = {
@@ -223,3 +123,46 @@ const fadeElms = document.querySelectorAll('.fade');
 fadeElms.forEach(el => observer.observe(el));
 
 /******************************************/
+
+// MODAL
+
+const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+const modals = document.querySelectorAll(".modal");
+const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+modalTriggerButtons.forEach(elem => {
+  elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+});
+modalCloseButtons.forEach(elem => {
+  elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
+});
+modals.forEach(elem => {
+  elem.addEventListener("click", event => {
+    if(event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+  });
+});
+
+// Maybe also close with "Esc"...
+document.addEventListener("keydown", event => {
+  if(event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+    toggleModal(document.querySelector(".modal.modal-show").id);
+  }
+});
+
+function toggleModal(modalId) {
+  const modal = document.getElementById(modalId);
+
+  if(getComputedStyle(modal).display==="flex") { // alternatively: if(modal.classList.contains("modal-show"))
+    modal.classList.add("modal-hide");
+    setTimeout(() => {
+      document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
+      modal.classList.remove("modal-show", "modal-hide");
+      modal.style.display = "none";      
+    }, 200);
+  }
+  else {
+    document.body.style.overflow = "hidden"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown
+    modal.style.display = "flex";
+    modal.classList.add("modal-show");
+  }
+}
