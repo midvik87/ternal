@@ -11,22 +11,22 @@
   <meta name="referrer" content="unsafe-url">
   <meta name="robots" content="index, follow">
   <!-- LINK -->
-  <link rel="icon" type="image/png" href="iternal/assets/img/logo.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="/iternal/assets/img/logo.png" sizes="48x48">
   <!-- SPEED -->
-  <link rel="preload" as="style" href="iternal/assets/css/style.css">
-  <link rel="preload" as="style" href="iternal/assets/css/nav.css">
+  <link rel="preload" as="style" href="/iternal/assets/css/style.css">
+  <link rel="preload" as="style" href="/iternal/assets/css/nav.css">
   <!-- STYLE -->
-  <link rel="stylesheet" href="iternal/assets/css/style.css">
-  <link rel="stylesheet" href="iternal/assets/css/nav.css">
+  <link rel="stylesheet" href="/iternal/assets/css/style.css">
+  <link rel="stylesheet" href="/iternal/assets/css/nav.css">
   <!-- SCRIPTS -->
-  <script defer src="iternal/assets/js/main.js"></script>
+  <script defer src="/iternal/assets/js/main.js"></script>
+  <script defer src="/iternal/assets/js/side.js"></script>
   <!-- TITLE -->
   <title>iTernal - Digital Tombstone, Public Monument, Columbarium, Memorial Columbarium</title>
 </head>
 
 <body>
   <!-- <button id="show-border" onclick="showBorder()">Border</button> -->
-  <!-- <button id="darkModeToggle" title="Dark Mode">Dark Mode</button> -->
   <button onclick="topFunction()" id="toTop" title="Go to top"></button>
 
 
@@ -35,8 +35,7 @@
 
     <div class="nav-wrapper">
       <div class="logo">
-        <a href="/iternal/index.html">iTernal</a>
-        <img src="iternal/assets/img/logo.png" alt="Logo Image">
+        <a href="index.html"><img src="/iternal/assets/img/logo.png" alt="Logo Image"></a>
       </div>
       <div class="hamburger">
         <div class="line1"></div>
@@ -48,14 +47,14 @@
         <li><a class="links" href="#about">About</a></li>
         <li><a class="links" href="#pricing">Pricing</a></li>
         <li><a class="links" href="#faq">FAQ<small>s</small></a></li>
-        <li><a class="links" href="#download">Downloads</a></li>
+        <!-- <li><a class="links" href="#download">Cemetery</a></li> -->
         <li><a class="links" href="#contact">Contact</a></li>
-        <li><button class="pricing-button" data-href="/pricing.html">Pricing page</button></li>
+        <li><button class="pricing-button"><a href="pricing.html">Pricing page</a></button></li>
         <li>
           <ul class="nav-social">
-            <li><a href="#"><img src="iternal/assets/ico/fb-ico.svg" alt="facebook"></a></li>
-            <li><a href="#"><img src="iternal/assets/ico/in-ico.svg" alt="instagram"></a></li>
-            <li><a href="#"><img src="iternal/assets/ico/tw-ico.svg" alt="twitter"></a></li>
+            <li><a href="#"><img src="/iternal/assets/ico/fb-ico.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="/iternal/assets/ico/in-ico.svg" alt="instagram"></a></li>
+            <li><a href="#"><img src="/iternal/assets/ico/tw-ico.svg" alt="twitter"></a></li>
           </ul>
         </li>
       </ul>
@@ -63,15 +62,22 @@
 
   </nav>
 
+
+  <!-- <object data="/iternal/assets/files/flayer1.pdf#view=Fit" type="application/pdf" width="100%" height="100%">
+    <p>
+        It appears your Web browser is not configured to display PDF files. No worries, just <a href="/iternal/assets/files/flayer1.pdf">click here to download the PDF file.</a>
+    </p>
+</object> -->
+
   <section id="home">
     <div class="container hero-container">
       <div class="hero-heading">
         <h1 class="fade fadeOut">We all want<br>to leave a <span class="hollow">trace</span></h1>
-        <div class="hero-heading__subtext">
+        <div class="hero-heading__subtext fade fadeOut">
           <p>Digital tombstone <span>/ for people and pets</span></p>
-          <div class="hero-heading__subtext-links">
-            <a href=""><span>Digital tombstone</span></a>
-            <a href="">/ Why a digital monument?</a>
+          <div class="hero-heading__subtext-links fade fadeOut">
+            <a href="/iternal/assets/files/flayer1.pdf"><span>Digital tombstone</span></a>
+            <a href="/iternal/assets/files/Funeral Home Assistant.pdf">/ Why a digital monument?</a>
           </div>
         </div>
       </div>
@@ -79,9 +85,9 @@
         <!-- <p>Find us<span></span></p> -->
         <p>Let's talk</p>
         <div class="social-links">
-          <a class="social-link" href=""><img src="iternal/assets/ico/fb-ico.svg" alt=""></a>
-          <a class="social-link" href=""><img src="iternal/assets/ico/in-ico.svg" alt=""></a>
-          <a class="social-link" href=""><img src="iternal/assets/ico/tw-ico.svg" alt=""></a>
+          <a class="social-link" href=""><img src="/iternal/assets/ico/fb-ico.svg" alt=""></a>
+          <a class="social-link" href=""><img src="/iternal/assets/ico/in-ico.svg" alt=""></a>
+          <a class="social-link" href=""><img src="/iternal/assets/ico/tw-ico.svg" alt=""></a>
         </div>
       </div>
       <div class="arrow">
@@ -98,7 +104,7 @@
       <div class="heading">
         <h4 class="fade fadeOut">What we do</h4>
         <h3 class="fade fadeOut">iTernal, our digital tombstone,
-          our digital memorial
+          our digital memorial wall
           and our digital
           columbarium,
           eliminates this
@@ -108,54 +114,95 @@
       <div class="about-subtext">
         <div class="about-subtext1 fade fadeOut">
           <h4>Story of the deceased</h4>
-          <cite>"The life of the dead id placed in the memory of the living."<br>Cicero</cite>
+          <cite>"The life of the dead is placed in the memory of the living."<br>Cicero</cite>
           <br>
-          <!-- <a href="#">Tell me more &#x21E2; </a> -->
-          <a href="#">Tell me more <img src="iternal/assets/ico/arrow_b_right.svg" alt=""></a>
+          <a href="about.html">Tell me more <img src="/iternal/assets/ico/arrow_b_right.svg" alt=""></a>
         </div>
         <div class="about-subtext2 fade fadeOut">
-          <h4>Funeral Home Assistent</h4>
+          <h4>Services</h4>
           <p>iTernal is world's first innovative, future oriented & completely personalized digital assistant for
             funeral and memorial services.</p>
-          <!-- <a href="#">Tell me more &#x21E2; </a> -->
-          <a href="#">Tell me more <img src="iternal/assets/ico/arrow_b_right.svg" alt=""></a>
+          <a href="about.html">Tell me more <img src="/iternal/assets/ico/arrow_b_right.svg" alt=""></a>
         </div>
       </div>
       <div class="about-slider fade fadeOut">
         <div class="about-slider-card">
           <figure>
-            <img src="iternal/assets/img/1.webp" alt="">
-            <figcaption>iTernal &mdash; <span>Digital
-                Columbarium</span></figcaption>
-          </figure>
-        </div>
-        <div class="about-slider-card">
-          <figure>
-            <img src="iternal/assets/img/2.webp" alt="">
-            <figcaption>iTernal &mdash; <span>Digital
-                Memorial Wall</span></figcaption>
-          </figure>
-        </div>
-        <div class="about-slider-card">
-          <figure>
-            <img src="iternal/assets/img/3.webp" alt="">
-            <figcaption>iTernal &mdash; <span>Digital
-                Public Monument</span></figcaption>
-          </figure>
-        </div>
-        <div class="about-slider-card">
-          <figure>
-            <img src="iternal/assets/img/4.webp" alt="">
+            <img data-modal-target="modal1" src="/iternal/assets/img/1.webp" alt="">
             <figcaption>iTernal &mdash; <span>Digital
                 Tombstone</span></figcaption>
           </figure>
         </div>
         <div class="about-slider-card">
           <figure>
-            <img src="iternal/assets/img/5.jpg" alt="">
+            <img data-modal-target="modal2" src="/iternal/assets/img/2.webp" alt="">
+            <figcaption>iTernal &mdash; <span>Digital
+                Columbarium</span></figcaption>
+          </figure>
+        </div>
+        <div class="about-slider-card">
+          <figure>
+            <img data-modal-target="modal3" src="/iternal/assets/img/3.webp" alt="">
+            <figcaption>iTernal &mdash; <span>Digital
+                Memorial Wall</span></figcaption>
+          </figure>
+        </div>
+        <div class="about-slider-card">
+          <figure>
+            <img data-modal-target="modal4" src="/iternal/assets/img/4.webp" alt="">
+            <figcaption>iTernal &mdash; <span>Digital 
+              Public Monument</span></figcaption>
+          </figure>
+        </div>
+        <div class="about-slider-card">
+          <figure>
+            <img data-modal-target="modal5" src="/iternal/assets/img/5.webp" alt="">
             <figcaption>iTernal &mdash; <span>Digital
                 Cemetery</span></figcaption>
           </figure>
+        </div>
+
+        <div class="modal" id="modal1"> <!-- This is the background overlay -->
+          <div class="modal-content"> <!-- This is the actual modal/popup box -->
+            <span class="modal-close">&times;</span>
+            <h3>Modal Title 1</h3>
+          </div>
+        </div>
+        <div class="modal" id="modal2">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Modal Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quod. Laborum aliquam suscipit itaque corporis.</p>
+            <p>Soluta ipsum inventore aspernatur nostrum qui laudantium necessitatibus cupiditate reprehenderit possimus vitae eveniet aperiam, ex, laborum deleniti modi nesciunt iure voluptas! Enim omnis maxime temporibus?</p>
+            <p>Excepturi aperiam quam ducimus cum reiciendis possimus, deserunt mollitia ea similique nisi eveniet repellat impedit.</p>
+          </div>
+        </div>
+        <div class="modal" id="modal3">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Modal Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quod. Laborum aliquam suscipit itaque corporis.</p>
+            <p>Soluta ipsum inventore aspernatur nostrum qui laudantium necessitatibus cupiditate reprehenderit possimus vitae eveniet aperiam, ex, laborum deleniti modi nesciunt iure voluptas! Enim omnis maxime temporibus?</p>
+            <p>Excepturi aperiam quam ducimus cum reiciendis possimus, deserunt mollitia ea similique nisi eveniet repellat impedit.</p>
+          </div>
+        </div>
+        <div class="modal" id="modal4">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Modal Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quod. Laborum aliquam suscipit itaque corporis.</p>
+            <p>Soluta ipsum inventore aspernatur nostrum qui laudantium necessitatibus cupiditate reprehenderit possimus vitae eveniet aperiam, ex, laborum deleniti modi nesciunt iure voluptas! Enim omnis maxime temporibus?</p>
+            <p>Excepturi aperiam quam ducimus cum reiciendis possimus, deserunt mollitia ea similique nisi eveniet repellat impedit.</p>
+          </div>
+        </div>
+        <div class="modal" id="modal5">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Modal Title 5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quod. Laborum aliquam suscipit itaque corporis.</p>
+            <p>Soluta ipsum inventore aspernatur nostrum qui laudantium necessitatibus cupiditate reprehenderit possimus vitae eveniet aperiam, ex, laborum deleniti modi nesciunt iure voluptas! Enim omnis maxime temporibus?</p>
+            <p>Excepturi aperiam quam ducimus cum reiciendis possimus, deserunt mollitia ea similique nisi eveniet repellat impedit.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -187,42 +234,39 @@
   <section id="pricing">
     <div class="container">
       <div class="heading">
-        <h4 class="fade fadeOut">What we charge</h4>
-        <h2 class="fade fadeOut">Choose the <span class="hollow">perfect plan</span> for you</h2>
+        <h4 class="fade fadeOut">What we offer</h4>
+        <h2 class="fade fadeOut">Choose the <span class="hollow">perfect product</span> for you</h2>
         <p class="fade fadeOut">We have multiple products that can pique your interest, you can choose between Digital
           Tombstone (for people and pets), Digital Public Monument, Digital Columbarium and more. Our most popular
           options are here but you can browse more just clicking on card buttons or link below.</p>
         <!-- <a href="#">Tell me more..&#x21E2; </a> -->
-        <a class="fade fadeOut" href="#">Tell me more <img src="iternal/assets/ico/arrow_b_right.svg" alt=""></a>
+        <a class="fade fadeOut" href="pricing.html">Tell me more <img src="/iternal/assets/ico/arrow_b_right.svg" alt=""></a>
       </div>
       <div class="prices-wrapper">
         <div class="prices-cards">
 
           <div class="prices-card fade fadeOut">
             <div class="prices-card__inner-left">
-              <h2><small>€</small> <u>5.000</u> <small>+tax</small></h2>
-              <p>In our individual package you can choose between <span>Digital tombstone</span> or <span>Digital public
-                  monument.</span><br><span class="details">For more details go to our pricing page.</span></p>
-              <button type="button" onclick="location.href='#prices';" value="Go to Prices">Buy now &#x21E2; </button>
+              <h2><small>€</small> <u>6.000</u> <small>+tax</small></h2>
+              <p>In our individual package you can choose colors for <span>Digital Tombstone</span>.<br><span class="details">For more details go to our pricing page.</span></p>
             </div>
             <div class="prices-card__inner-right">
-              <a href="">Show me more <span>▼</span></a>
+              <a href="pricing.html">Show me more <span>▼</span></a>
             </div>
           </div>
 
           <div class="prices-card fade fadeOut">
             <div class="prices-card__inner-left">
-              <h2><small>€</small> <u>30.000</u> <small>+tax</small></h2>
-              <p>In our bundle package you can choose between <span>Digital columbarium</span> or <span>Digital memorial
-                  wall.</span><br><span class="details">For more details go to our pricing page.</span></p>
-              <button type="button" onclick="location.href='#prices';" value="Go to Prices">Buy now &#x21E2; </button>
+              <h2><small>€</small> <u>40.000</u> <small>+tax</small></h2>
+              <p>In our bundle package you can get <span>Digital Columbarium</span> or <span>Digital Memorial
+                  Wall.</span><br><span class="details">For more details go to our pricing page.</span></p>
             </div>
             <div class="prices-card__inner-right">
-              <a href="">Show me more <span>▼</span></a>
+              <a href="pricing.html">Show me more <span>▼</span></a>
             </div>
           </div>
 
-          <div class="prices-card fade fadeOut">
+          <!-- <div class="prices-card fade fadeOut">
             <div class="prices-card__inner-left">
               <h2><small>€</small> <u>16.999</u> <small>+tax</small></h2>
               <p>In our bundle package you can choose between <span>Digital columbarium</span> or <span>Digital memorial
@@ -232,7 +276,7 @@
             <div class="prices-card__inner-right">
               <a href="">Show me more <span>▼</span></a>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -240,9 +284,9 @@
   </section>
 
   <section id="faq">
-    <div class="gradient-wrapper">
+    <!-- <div class="gradient-wrapper">
       <div class="gradient-top"></div>
-    </div>
+    </div> -->
     <div class="container">
       <div class="heading">
         <h4 class="fade fadeOut">What you ask</h4>
@@ -367,30 +411,29 @@
         <h3 class="accordionItemHeading"><a href="#faq">Collapse <span> ▼ </span></a></h3>
       </div>
     </div>
-    <div class="gradient-wrapper">
+    <!-- <div class="gradient-wrapper">
       <div class="gradient-bottom"></div>
-    </div>
+    </div> -->
   </section>
 
-  <section id="download">
+  <!-- <section id="download">
     <div class="container">
       <div class="heading fade fadeOut">
         <h4>Downloads</h4>
-        <!-- <h2><span class="hollow">Flyers</span> and <span class="hollow">brochures</span></h2> -->
-        <h2>Flyers <span class="hollow">and</span> brochures</h2>
-        <p>Find out more about our products and how everything works in downloadable content.</p>
+        <h2>Digital <span class="hollow">cemetery</span></h2>
+        <p>The digital cemetery is a reflection of a new era that has advanced so much with the development of technology that we can also change the millennial patterns of human behaviour.</p>
         <button>Digital Tombstone</button>
         <button>Why a Digital Monument?</button>
       </div>
       <div class="components fade fadeOut">
-        <h3>Components</h3>
-        <a href="">Digital tombstone</a>
-        <a href="">Complex base</a>
-        <a href="">Memorial wall</a>
-        <a href="">Columbarium wall</a>
+        <h3>Contents</h3>
+        <a href="/iternal/assets/files/NADGROVNI SPOMENIK.pdf">Digital tombstone</a>
+        <a href="/iternal/assets/files/OSNOVA KOMPLEKSA.pdf">Complex base</a>
+        <a href="/iternal/assets/files/SPOMEN ZID.pdf">Memorial wall</a>
+        <a href="/iternal/assets/files/ZID URNI.pdf">Columbarium wall</a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="contact">
     <div class="gradient-wrapper">
@@ -411,7 +454,7 @@
                   Janka Mlakarja 23<br>
                   Maribor, Slovenia</p>
                 <p>
-                  <a href="tel:+138641759317">(386) 417 593 17</a><br><br>
+                  <a href="tel:+138641759317">+386 41 759 317</a><br><br>
                   <a href="mailto:saso.radovanovic@gmail.com">saso.radovanovic@gmail.com</a><br>
                   <a href="mailto:bioenergija.mb@gmail.com">bioenergija.mb@gmail.com</a><br>
                 </p>
@@ -426,10 +469,10 @@
           <div class="footer-contact fade fadeOut">
             <div class="footer-contact__heading">
               <h3>Contact<br> &mdash; Us</h3>
-              <p>Fill out this form and we will get back to you as soon as we can. Ask us anything or just say hi..</p>
+              <p>Fill out this form and we will get back to you as soon as we can. Ask us anything or just say hi...</p>
             </div>
             <div class="form">
-              <form id="form" action="iternal/assets/js/contact.php" method="POST">
+              <form id="form" action="/iternal/assets/js/contact.php" method="POST">
                 <input type="text" name="title" size="35" placeholder="Subject" required>
                 <input type="text" name="email" size="35" placeholder="E-mail" required>
                 <textarea name="message" cols="35" rows="6" placeholder="Message text"></textarea>
@@ -449,7 +492,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ<small>s</small></a></li>
-            <li><a href="#download">Downloads</a></li>
+            <!-- <li><a href="#download">Cemetery</a></li> -->
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
