@@ -1,0 +1,152 @@
+#about-page p:not(.footer-contact__heading p, .footer-bottom p) {
+    max-width: initial;
+    text-align: left;
+}
+
+.item-content h3,
+.item-content h4,
+.about-text p:first-child {
+    margin-top: 0;
+}
+
+.about-products h4 {
+    text-transform: none;
+    font-size: 1.8rem;
+    margin: 1rem auto;
+}
+
+.about-about-wrapper h3,
+.about-about-wrapper h4,
+.about-about-wrapper p {
+    text-align: left;
+}
+
+.item-content,
+.about-cemetery {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid var(--color-background-card);
+}
+
+.break {
+    border-top: none;
+}
+
+.more-pics {
+    justify-content: center;
+}
+
+.about-cemetery h4 {
+    font-size: 1.8rem;
+    text-transform: none;
+    margin-top: 0;
+}
+
+.about-cemetery p,
+.about-cemetery h4 {
+    text-align: left;
+}
+
+.about-cemetery-imgs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.about-cemetery-imgs img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--color-box-shadow);
+}
+
+.about-cemetery-imgs__top img {
+    max-width: 70%;
+}
+
+.about-cemetery-imgs__bot {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.about-cemetery-imgs__bot img {
+    max-width: 30%;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+.item-content h3,
+.item-content h4 {
+    text-align: left;
+    text-transform: none;
+}
+
+.specs {
+    text-decoration: underline;
+    color: var(--color-monet);
+}
+
+cite,
+.patent {
+    font-size: .8rem;
+    font-style: italic;
+    line-height: 1.2rem;
+}
+
+.footer-bottom p {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: .5rem;
+}
+
+footer .container::after {
+    top: 115%;
+}
+
+@media (min-width: 576px) {
+
+    /* .about-cemetery-items__item {
+        margin: 3rem auto;
+    } */
+}
+
+@media (min-width: 768px) {
+
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 2;
+    }
+
+    .about-about-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #about .container {
+        justify-content: center;
+    }
+
+    .about-products {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 3;
+    }
+}
+
+/* @media (min-width: 1400px) {
+
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 3;
+    }
+} */

@@ -90,8 +90,8 @@ nav {
   left: 0;
   top: 0;
   z-index: 10;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 /*Styling logo*/
@@ -101,13 +101,12 @@ nav {
 }
 
 .logo a {
-  /* display: none; */
   text-decoration: none;
 }
 
-.logo img {
+.logo a img {
   display: block;
-  width: 55px;
+  height: 100%;
 }
 
 /*Styling Links*/
@@ -166,13 +165,21 @@ nav {
 
 .pricing-button {
   border: 1px solid var(--color-secondary-hover);
-  color: var(--color-secondary-hover);
   background-color: transparent;
 }
 
 
 .pricing-button:hover {
   transition: all ease-in-out 350ms;
+}
+
+.pricing-button a:hover {
+  color: var(--color-primary);
+}
+
+.pricing-button a {
+  color: var(--color-secondary-hover);
+  text-decoration: none;
 }
 
 /*Styling Hamburger Icon*/
@@ -198,7 +205,6 @@ nav {
   nav {
     justify-content: flex-start;
     position: fixed;
-    z-index: 4;
   }
 
   .pricing-button,
@@ -226,15 +232,15 @@ nav {
     align-content: center;
   }
 
-  .logo a {
+  /* .logo a {
     display: none;
-    font-size: 30px;
-  }
+  } */
 
   .logo img {
     width: 3rem;
     height: 3.5rem;
     margin-left: 10px;
+    display: none;
   }
 
   .nav-links {
@@ -354,8 +360,7 @@ nav {
 
 @media (min-width: 768px) {
 
-  .nav-social,
-  .logo a {
+  .nav-social {
     display: none;
   }
 

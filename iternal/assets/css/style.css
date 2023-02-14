@@ -18,6 +18,7 @@
     --color-white: #fff;
 
     --color-primary: #262626;
+    /* --color-primary: #000; */
     --color-primary-hover: #3a3a3a;
     --color-secondary: #f0f0f0;
     --color-secondary-hover: #888888;
@@ -107,7 +108,8 @@ h3 {
 }
 
 h4 {
-    line-height: normal;
+    line-height: 29px;
+    /* letter-spacing: 1px; */
     font-weight: var(--font-w-bold);
     font-size: var(--text-h4);
     text-transform: uppercase;
@@ -171,6 +173,12 @@ p {
     max-width: 450px;
 }
 
+p,
+cite,
+ul li {
+    color: var(--color-secondary-hover);
+}
+
 .heading h2 {
     margin-top: 0;
 }
@@ -221,7 +229,7 @@ body {
     padding: 0;
     color: var(--color-primary);
     background-color: var(--color-white);
-    line-height: var(--text-h4);
+    line-height: 25px;
     font-weight: var(--font-w-regular);
     font-family: var(--font);
     text-underline-offset: 0.5em;
@@ -281,7 +289,7 @@ img {
 }
 
 .show {
-    border: 1px dashed red !important;
+    outline: 1px dashed red !important;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -333,11 +341,34 @@ img {
     transform: none;
 }
 
+.BackBtn {
+    text-align: left;
+    text-transform: none;
+}
+
+.arrow img {
+    height: 20px;
+    margin-bottom: -3px;
+}
+
+.BackBtn span img {
+    transform: rotate(180deg);
+}
+
+.BackBtn a {
+    text-decoration: none;
+}
+
+.BackBtn a:hover {
+    text-decoration: underline;
+}
+
 /* ********************************************** */
 /*                     GRID                       */
 /* ********************************************** */
 
 @media (min-width: 576px) {
+
     .nav-wrapper,
     .container {
         max-width: 540px;
@@ -345,6 +376,7 @@ img {
 }
 
 @media (min-width: 768px) {
+
     .nav-wrapper,
     .container {
         max-width: 720px;
@@ -352,6 +384,7 @@ img {
 }
 
 @media (min-width: 992px) {
+
     .nav-wrapper,
     .container {
         max-width: 960px;
@@ -359,6 +392,7 @@ img {
 }
 
 @media (min-width: 1200px) {
+
     .nav-wrapper,
     .container {
         max-width: 1140px;
@@ -366,6 +400,7 @@ img {
 }
 
 @media (min-width: 1400px) {
+
     .nav-wrapper,
     .container {
         max-width: 1320px;
@@ -376,11 +411,31 @@ img {
 /*                  STYLING                       */
 /* ********************************************** */
 
+#about-home,
+#pricing-home {
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    position: relative;
+}
+
+#about-home::before,
+#pricing-home::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .95);
+}
+
+
 .container,
 .hero-heading,
 .social,
 .social p,
-.arrow,
 .heading a,
 .about-subtext a,
 .about-slider,
@@ -396,7 +451,7 @@ section {
     margin: 5rem auto;
 }
 
-section:first-of-type {
+#home {
     margin-top: 0;
 }
 
@@ -419,7 +474,7 @@ section:last-of-type {
 #home .container::after,
 #about .container::after,
 #pricing .container::after,
-#download .container::after,
+#faq .container::after,
 footer .container::after {
     position: absolute;
     transform: rotate(-90deg);
@@ -448,8 +503,8 @@ footer .container::after {
     top: 40%;
 }
 
-#download .container::after {
-    content: 'FAQ&DOWNLOAD';
+#faq .container::after {
+    content: 'FAQ';
     top: 80%;
 }
 
@@ -558,10 +613,10 @@ footer .container::after {
     transform: scale(1.1);
 }
 
-.arrow {
+/* .arrow {
     display: none;
     justify-content: center;
-}
+} */
 
 .shade {
     position: absolute;
@@ -620,6 +675,10 @@ footer .container::after {
     width: 150px;
 }
 
+.heading a {
+    margin-inline: auto;
+}
+
 .about-subtext img,
 .heading img {
     max-width: 20px;
@@ -637,7 +696,15 @@ footer .container::after {
 
 .about-slider-card img {
     border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.about-slider-card img:hover {
     box-shadow: var(--color-box-shadow);
+}
+
+.about-slider-card img:hover + figcaption  {
+    color: var(--color-monet);
 }
 
 .about-slider-card figcaption {
@@ -646,6 +713,147 @@ footer .container::after {
 
 .about-slider-card figcaption span {
     font-weight: var(--font-w-bold);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* or center */
+    z-index: 11;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.modal-show {
+    animation: fadeIn 0.1s ease-in-out forwards;
+}
+
+.modal.modal-hide {
+    animation: fadeOut 0.1s ease-in-out 0.1s forwards;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal.modal-show .modal-content {
+    animation: fadeInDown 0.3s ease-in-out forwards;
+}
+
+.modal.modal-hide .modal-content {
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+}
+
+.modal-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-content p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    max-width: initial;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    /* width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+}
+
+@media(max-width: 992px) {
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media(max-width:767px) {
+
+    .modal-content {
+        padding: 2rem 1rem 1rem 1rem;
+        width: 90%;
+    }
+
+    .modal-content h1 {
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* ********************************************** */
@@ -664,29 +872,37 @@ footer .container::after {
     padding: 0 1rem;
 } */
 
-#pricing .heading p,
+/* #pricing .heading p,
 #pricing .heading a {
     margin-left: 0;
     text-align: left;
-}
+} */
 
 .prices-wrapper {
     margin-top: 3.5rem;
 }
 
 .prices-card {
-    --color-primary: #f0f0f0;
-    --color-background-card: #262626;
+    /* --color-primary: #f0f0f0;
+    --color-background-card: #262626; */
 
     flex-direction: row;
     max-width: 30rem;
     margin-inline: auto;
     border-radius: var(--border-radius);
-    background-color: var(--color-background-card);
+    /* background-color: var(--color-background-card); */
     padding: .5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     box-shadow: var(--color-box-shadow);
+}
+
+.prices-card {
+    /* --color-primary: #f0f0f0;
+    --color-background-card: #262626; */
+
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .prices-card h2 {
@@ -701,9 +917,9 @@ footer .container::after {
     display: none;
 }
 
-.prices-card__inner-left {
+/* .prices-card__inner-left {
     width: 92%;
-}
+} */
 
 .prices-card__inner-right {
     justify-content: center;
@@ -715,6 +931,11 @@ footer .container::after {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     text-decoration: none;
+}
+
+span.details {
+    margin-top: 15px;
+    display: block;
 }
 
 /* ********************************************** */
@@ -824,8 +1045,8 @@ footer .container::after {
 }
 
 #faq .container {
-    background-color: rgb(221, 221, 221);
-    max-width: 100vw;
+    /* background-color: rgb(221, 221, 221); */
+    /* max-width: 100vw; */
     padding-bottom: 5rem;
 }
 
@@ -1066,6 +1287,7 @@ form textarea:focus::placeholder {
     .hero-heading__subtext p:last-child {
         text-decoration: underline;
     }
+
     .hero-heading__subtext p:last-child span {
         text-decoration: none;
     }
@@ -1112,7 +1334,7 @@ form textarea:focus::placeholder {
 
     address {
         text-align: left;
-    }    
+    }
 
     iframe {
         height: 200px;
@@ -1292,6 +1514,7 @@ form textarea:focus::placeholder {
         justify-content: center;
         overflow-x: hidden;
     }
+
     .about-slider-card {
         min-width: auto;
     }
