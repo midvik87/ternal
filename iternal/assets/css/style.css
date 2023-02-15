@@ -1224,6 +1224,7 @@ form textarea:focus::placeholder {
 
 .footer-contact__heading p {
     max-width: 300px;
+    margin-inline: auto;
 }
 
 .footer-bottom a {
