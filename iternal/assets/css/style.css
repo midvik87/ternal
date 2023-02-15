@@ -84,6 +84,12 @@ hr {
     border: 1px dashed var(--color-primary-hover);
 }
 
+u {
+    color: var(--color-teriary-hover);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
 h1 {
     line-height: var(--text-h1);
     font-weight: var(--font-w-black);
