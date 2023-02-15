@@ -169,7 +169,7 @@ a:hover {
 }
 
 p {
-    margin-inline: auto;
+    /* margin-inline: auto; */
     max-width: 450px;
 }
 
@@ -181,12 +181,6 @@ ul li {
 
 .heading h2 {
     margin-top: 0;
-}
-
-#about h3,
-.about-subtext {
-    width: 70%;
-    margin: 3rem auto;
 }
 
 .heading h4,
@@ -246,7 +240,7 @@ img {
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth;
-        scroll-padding-top: 50px;
+        scroll-padding-top: 80px;
     }
 }
 
@@ -679,10 +673,14 @@ footer .container::after {
     margin-inline: auto;
 }
 
-.about-subtext img,
-.heading img {
-    max-width: 20px;
+.arrow-link {
+    width: 20px;
     margin-left: 10px;
+}
+
+.pricing-header {
+    color: var(--color-monet);
+    font-weight: 600;
 }
 
 .about-slider {
@@ -745,7 +743,7 @@ footer .container::after {
     margin: 2rem;
     padding: 2rem;
     border-radius: 0.25rem;
-    width: 90%;
+    max-width: 90%;
     max-height: 90%;
     overflow: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -759,15 +757,16 @@ footer .container::after {
     animation: fadeOutUp 0.2s ease-in-out forwards;
 }
 
-.modal-content h1 {
-    text-align: center;
+.modal-content h3 {
     margin-bottom: 2rem;
+    /* margin-top: 0 !important; */
 }
 
 .modal-content p {
     margin: 1rem 0;
     line-height: 1.5rem;
-    max-width: initial;
+    margin-inline: auto;
+    /* max-width: initial; */
 }
 
 .modal-close {
@@ -944,6 +943,7 @@ span.details {
 
 #faq .heading p {
     margin-bottom: 3rem;
+    margin-inline: auto;
 }
 
 .accordionItem:focus>.accordionItem:last-child {
@@ -1080,7 +1080,7 @@ span.details {
 .components a::before {
     position: absolute;
     left: 0px;
-    padding-top: 3px;
+    /* padding-top: 3px; */
     display: inline-block;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -1228,6 +1228,10 @@ form textarea:focus::placeholder {
 
 .footer-bottom a {
     text-decoration: none;
+}
+
+.footer-bottom p {
+    margin-inline: auto;
 }
 
 .footer-links a,

@@ -21,11 +21,21 @@
     text-align: left;
 }
 
-.item-content,
-.about-cemetery {
+.item-content{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    border-top: 1px solid var(--color-background-card);
+}
+
+.item-content p {
+    text-align: left;
+}
+
+#tombstone,
+#columbarium,
+#memorial-wall {
+    font-weight: bold;
+    border-top: 3px solid var(--color-teriary);
+    padding-top: 2rem;
 }
 
 .break {
