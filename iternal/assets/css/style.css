@@ -743,8 +743,8 @@ footer .container::after {
     margin: 2rem;
     padding: 2rem;
     border-radius: 0.25rem;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
     overflow: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
@@ -789,6 +789,22 @@ footer .container::after {
 .modal-close:hover,
 .modal-close:focus {
     color: rgba(0, 0, 0, 0.5);
+}
+
+#tombstone-special .modal-content {
+    width: 90%;
+    height: 90%;
+}
+
+.modal-content__imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-content__imgs img {
+    /* max-width: 90%; */
+    height: 70vh;
+    /* max-width: 150%; */
 }
 
 /* Animations */
@@ -1506,6 +1522,11 @@ form textarea:focus::placeholder {
     .footer-location {
         justify-content: center;
         gap: 10%;
+    }
+
+    .modal-content__imgs img {
+        height: 100%;
+        max-width: 100%;
     }
 }
 
