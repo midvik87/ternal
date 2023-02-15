@@ -101,7 +101,7 @@ hamburger.addEventListener('click', () => {
 
 const observerOptions = {
   root: null,
-  rootMargin: "0px",
+  rootMargin: "1%",
   threshold: 0.3
 };
 
