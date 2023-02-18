@@ -599,20 +599,20 @@ footer .container::after {
     transform: scale(1.1);
 }
 
-.arrow {
+.scrollDown {
     position: absolute;
     width: 50px;
     left: calc( 50% - 25px );
 }
 
-.arrow a {
+.scrollDown a {
     padding-top: 60px;
     position: relative;
     color: var(--color-secondary-hover);
     text-decoration: none;
 }
 
-.arrow a span {
+.scrollDown a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -624,7 +624,7 @@ footer .container::after {
     box-sizing: border-box;
 }
 
-.arrow a span::before {
+.scrollDown a span::before {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -635,11 +635,11 @@ footer .container::after {
     background-color: #fff;
     border-radius: 100%;
     -webkit-animation: sdb10 2s infinite;
-    animation: sdb10 2s infinite;
+    animation: mouse 2s infinite;
     box-sizing: border-box;
 }
 
-@-webkit-keyframes sdb10 {
+@-webkit-keyframes mouse {
     0% {
         -webkit-transform: translate(0, 0);
         opacity: 0;
@@ -659,7 +659,7 @@ footer .container::after {
     }
 }
 
-@keyframes sdb10 {
+@keyframes mouse {
     0% {
         transform: translate(0, 0);
         opacity: 0;
