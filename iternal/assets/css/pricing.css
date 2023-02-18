@@ -30,17 +30,9 @@ section .container::after {
 }
 
 .toggle-button {
-    display: block;
-    margin-inline: auto;
-    background-color: white;
+    background-color: transparent;
     color: var(--color-primary);
-    border-top: 1px solid var(--color-background-card);
-    width: 180px;
-    box-shadow: none;
-}
-
-.toggle-button:hover {
-    border-top: 1px solid var(--color-primary);
+    border: 1px solid var(--color-background-card);
 }
 
 @media (min-width: 768px) {

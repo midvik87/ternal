@@ -261,7 +261,7 @@ img {
     padding: 15px;
     transition: all 0.5s;
     opacity: 0.6;
-    background-image: url("../ico/arrow_b_upTop.svg");
+    background-image: url(..ico/arrow_b_upTop.svg);
     background-repeat: no-repeat;
     background-color: rgba(240, 240, 240, 0.4);
 }
