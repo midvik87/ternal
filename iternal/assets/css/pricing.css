@@ -600,6 +600,10 @@ u {
     max-width: 100%;
 }
 
+#tombstone-gallery .gallery-content {
+    flex-wrap: nowrap;
+}
+
 .gallery-content {
     display: flex;
     flex-wrap: wrap;
