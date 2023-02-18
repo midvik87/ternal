@@ -767,6 +767,7 @@ footer .container::after {
 .specs {
     text-decoration: underline;
     color: var(--color-monet);
+    cursor: pointer;
 }
 
 .patent {
