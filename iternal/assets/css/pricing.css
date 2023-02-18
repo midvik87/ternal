@@ -639,6 +639,10 @@ u {
     flex-direction: column;
 }
 
+.gallery-item__item .gallery-item img {
+    max-height: 100%;
+}
+
 .block {
     display: inline-block;
 }
