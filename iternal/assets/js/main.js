@@ -138,13 +138,13 @@ modalCloseButtons.forEach(elem => {
 });
 modals.forEach(elem => {
   elem.addEventListener("click", event => {
-    if(event.currentTarget === event.target) toggleModal(event.currentTarget.id);
+    if (event.currentTarget === event.target) toggleModal(event.currentTarget.id);
   });
 });
 
 // Maybe also close with "Esc"...
 document.addEventListener("keydown", event => {
-  if(event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+  if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
     toggleModal(document.querySelector(".modal.modal-show").id);
   }
 });
@@ -152,12 +152,12 @@ document.addEventListener("keydown", event => {
 function toggleModal(modalId) {
   const modal = document.getElementById(modalId);
 
-  if(getComputedStyle(modal).display==="flex") { // alternatively: if(modal.classList.contains("modal-show"))
+  if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
     modal.classList.add("modal-hide");
     setTimeout(() => {
       document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
       modal.classList.remove("modal-show", "modal-hide");
-      modal.style.display = "none";      
+      modal.style.display = "none";
     }, 200);
   }
   else {
@@ -166,3 +166,28 @@ function toggleModal(modalId) {
     modal.classList.add("modal-show");
   }
 }
+
+// ACTIVE LINKS NAV
+
+const sections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 150;
+    const sectionId = current.getAttribute("id");
+
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ) {
+      document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.remove("active");
+    }
+  });
+};

@@ -64,6 +64,7 @@
     --font-w-regular: 400;
     --font-w-bold: 600;
     --font-w-black: 900;
+
 }
 
 /* ********************************************** */
@@ -79,15 +80,24 @@ p {
     cursor: default;
 }
 
-hr {
-    opacity: .4;
-    border: 1px dashed var(--color-primary-hover);
-}
-
+b,
 u {
     color: var(--color-teriary-hover);
     font-weight: 600;
     text-underline-offset: 3px;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: 600;
+    font-size: larger;
+    color: var(--color-teriary-hover);
+    /* quotes: '«' '»'; */
+}
+
+hr {
+    opacity: .4;
+    border: 1px dashed var(--color-primary-hover);
 }
 
 h1 {
@@ -157,7 +167,7 @@ button {
 button:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    border: 1px solid var(--color-black);
+    border: 1px solid var(--color-secondary-hover);
 }
 
 button:active {
@@ -183,10 +193,6 @@ p,
 cite,
 ul li {
     color: var(--color-secondary-hover);
-}
-
-.heading h2 {
-    margin-top: 0;
 }
 
 .heading h4,
@@ -265,7 +271,7 @@ img {
     padding: 15px;
     transition: all 0.5s;
     opacity: 0.6;
-    background-image: url("../ico/arrow_b_upTop.svg");
+    background-image: url("..ico/arrow_b_upTop.svg");
     background-repeat: no-repeat;
     background-color: rgba(240, 240, 240, 0.4);
     /* background-size: cover; */
@@ -428,7 +434,7 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .95);
+    background-color: rgba(255, 255, 255, .98);
 }
 
 
@@ -473,6 +479,7 @@ section:last-of-type {
 
 #home .container::after,
 #about .container::after,
+#about-home .container::after,
 #pricing .container::after,
 #faq .container::after,
 footer .container::after {
@@ -494,13 +501,18 @@ footer .container::after {
 }
 
 #about .container::after {
-    content: 'ABOUT';
+    content: 'SERVICES';
     top: 50%;
+}
+
+#about-home .container::after {
+    content: 'ABOUT';
+    top: 70%;
 }
 
 #pricing .container::after {
     content: 'PRICES';
-    top: 40%;
+    top: 60%;
 }
 
 #faq .container::after {
@@ -510,7 +522,7 @@ footer .container::after {
 
 footer .container::after {
     content: 'CONTACT';
-    top: 65%;
+    bottom: 20%;
     color: rgba(102, 102, 102, 0.1);
 }
 
@@ -632,6 +644,151 @@ footer .container::after {
 /*                    ABOUT                       */
 /* ********************************************** */
 
+/* side css */
+
+.item-content h3,
+.item-content h4,
+.about-text p:first-child {
+    margin-top: 0;
+}
+
+.about-products h4 {
+    text-transform: none;
+    font-size: 1.8rem;
+    margin: 1rem auto;
+}
+
+.about-about-wrapper {
+    margin-top: 2rem;
+}
+
+.about-about-wrapper h3,
+.about-about-wrapper h4,
+.about-about-wrapper p {
+    text-align: left;
+}
+
+.item-content{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.item-content p {
+    text-align: left;
+}
+
+#tombstone,
+#columbarium,
+#memorial-wall {
+    font-weight: bold;
+    border-top: 3px solid var(--color-teriary);
+    padding-top: 2rem;
+}
+
+.break {
+    border-top: none;
+}
+
+.more-pics {
+    justify-content: center;
+}
+
+.about-cemetery {
+    padding-top: 2rem;
+}
+
+.about-cemetery h4 {
+    font-size: 1.8rem;
+    text-transform: none;
+    margin-top: 0;
+}
+
+.about-cemetery p,
+.about-cemetery h4 {
+    text-align: left;
+}
+
+.item-content h3,
+.item-content h4 {
+    text-align: left;
+    text-transform: none;
+}
+
+.specs {
+    text-decoration: underline;
+    color: var(--color-monet);
+}
+
+.patent {
+    font-size: .8rem;
+    font-style: italic;
+    line-height: 1.2rem;
+    color: var(--color-teriary);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.footer-bottom p {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: .5rem;
+}
+
+footer .container::after {
+    top: 90%;
+}
+
+@media (min-width: 576px) {
+
+    /* .about-cemetery-items__item {
+        margin: 3rem auto;
+    } */
+}
+
+@media (min-width: 768px) {
+
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 2;
+    }
+
+    .about-about-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #about .container {
+        justify-content: center;
+    }
+
+    .about-products {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 3;
+    }
+}
+
+/* @media (min-width: 1400px) {
+
+    .about-text,
+    .about-cemetery,
+    .item-content {
+        columns: 3;
+    }
+} */
+
+/* end side css */
+
 #about {
     margin-top: -4rem;
 }
@@ -747,12 +904,16 @@ footer .container::after {
     position: relative;
     background-color: #fff;
     margin: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 0.25rem;
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content:not(#about .modal-content) {
+    padding: 2rem;
 }
 
 .modal.modal-show .modal-content {
@@ -761,18 +922,6 @@ footer .container::after {
 
 .modal.modal-hide .modal-content {
     animation: fadeOutUp 0.2s ease-in-out forwards;
-}
-
-.modal-content h3 {
-    margin-bottom: 2rem;
-    margin-top: 0 !important;
-}
-
-.modal-content p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
-    margin-inline: auto;
-    /* max-width: initial; */
 }
 
 .modal-close {
@@ -797,6 +946,42 @@ footer .container::after {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.gallery .modal-content {
+    width: auto;
+    height: auto;
+}
+
+.modal-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 0 !important;
+}
+
+.modal-content p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    margin-inline: auto;
+    /* max-width: initial; */
+}
+
+.modal-content__left {
+    padding: 1rem;
+}
+
+.modal-content__right {
+    padding-top: 1rem;
+}
+
+.modal-content__right img {
+    min-width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    object-position: 50% 33%;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+
 #tombstone-special .modal-content {
     width: 90%;
     height: 90%;
@@ -804,15 +989,13 @@ footer .container::after {
 
 .modal-content__imgs {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
 }
-
 .modal-content__imgs img {
-    /* max-width: 90%; */
-    height: 70vh;
-    /* max-width: 150%; */
+    max-height: 80vh;
 }
-
 /* Animations */
 @keyframes fadeIn {
     0% {
@@ -938,9 +1121,13 @@ footer .container::after {
     display: none;
 }
 
-/* .prices-card__inner-left {
+.prices-card__inner-left {
     width: 92%;
-} */
+}
+
+.prices-card__inner-left h2 u {
+    color: var(--color-secondary);
+}
 
 .prices-card__inner-right {
     justify-content: center;
@@ -1073,12 +1260,8 @@ span.details {
 }
 
 /* ********************************************** */
-/*                  DOWNLOADS                     */
+/*                    CEMETERY                    */
 /* ********************************************** */
-
-#download {
-    margin-top: 0;
-}
 
 .components {
     flex-direction: column;
@@ -1087,14 +1270,31 @@ span.details {
     margin-inline: auto;
 }
 
-.components a {
+.components-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    flex-direction: column;
+}
+
+.components a:hover,
+.components h4 {
+    text-decoration: underline;
+}
+.components h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.components a {
+    /* justify-content: flex-start; */
+    text-decoration: none;
     position: relative;
     align-items: center;
     padding-left: 2rem;
     margin: .5rem 0;
-    text-align: left;
-    max-width: 250px;
+    /* text-align: left;
+    max-width: 250px; */
     text-transform: uppercase;
     font-weight: var(--font-w-bold);
 }
@@ -1112,10 +1312,6 @@ span.details {
     transition: all 0.2s ease 0s;
     background: rgb(20, 157, 204);
     border-radius: 50%;
-}
-
-#download button {
-    margin: 1rem;
 }
 
 /* ********************************************** */
@@ -1335,6 +1531,14 @@ form textarea:focus::placeholder {
         text-align: center;
     }
 
+    .components-wrapper {
+        flex-direction: row;
+    }
+
+    .components a {
+        margin-inline: 2rem;
+    }
+
     footer .heading {
         width: 100%;
     }
@@ -1482,47 +1686,9 @@ form textarea:focus::placeholder {
     }
 
     #download .container {
-        flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-
-    #download .heading {
-        text-align: right;
-    }
-
-    #download h4 {
-        margin-right: 0;
-    }
-
-    #download p {
-        margin-right: 0;
-    }
-
-    #download button:last-child {
-        margin-right: 0;
-    }
-
-    .components {
-        position: relative;
-        margin: 4.8rem 0 0 20%;
-    }
-
-    .components::before {
-        --height: 90%;
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: var(--height);
-        left: -5.7rem;
-        top: 15%;
-        background-color: var(--color-teriary);
-    }
-
-    /* .footer-wrapper {
-        max-width: 80%;
-
-    } */
 
     .footer-contact,
     .footer-location {
@@ -1563,10 +1729,6 @@ form textarea:focus::placeholder {
         max-width: 150px;
     }
 
-    .components::before {
-        left: -6.7rem;
-    }
-
     #pricing .heading p {
         margin-left: 0;
     }
@@ -1578,9 +1740,5 @@ form textarea:focus::placeholder {
         line-height: 58px;
         width: 77%;
         margin-right: 1rem;
-    }
-
-    .components::before {
-        left: -7.5rem;
     }
 }

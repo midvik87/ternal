@@ -15,18 +15,20 @@
   <!-- SPEED -->
   <link rel="preload" as="style" href="iternal/assets/css/style.css">
   <link rel="preload" as="style" href="iternal/assets/css/pricing.css">
-  <link rel="preload" as="style" href="iternal/assets/css/about.css">
   <link rel="preload" as="style" href="iternal/assets/css/nav.css">
   <!-- STYLE -->
   <link rel="stylesheet" href="iternal/assets/css/style.css">
   <link rel="stylesheet" href="iternal/assets/css/pricing.css">
-  <link rel="stylesheet" href="iternal/assets/css/about.css">
   <link rel="stylesheet" href="iternal/assets/css/nav.css">
   <!-- SCRIPTS -->
   <script defer src="iternal/assets/js/main.js"></script>
-  <script defer src="iternal/assets/js/side.js"></script>
+  <script defer src="iternal/assets/js/pricing.js"></script>
   <!-- TITLE -->
   <title>PRICING iTernal - Digital Tombstone, Public Monument, Columbarium, Memorial Columbarium</title>
+
+  <!--[if lt IE 9]>
+    <script src="respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -48,20 +50,16 @@
         <div class="line3"></div>
       </div>
       <ul class="nav-links">
-        <li><a class="links active" href="index.html">Home</a></li>
+        <li><a class="links active" href="#pricing-home">Home</a></li>
         <li><a class="links" href="#pricing-cards">Pricing</a></li>
-        <li><a class="links" href="#about-home">About</a></li>
-        <li><a class="links" href="#cemetery">Products</a></li>
-        <!-- <li><a class="links" href="#faq">FAQ<small>s</small></a></li> -->
-        <!-- <li><a class="links" href="#download">Downloads</a></li> -->
+        <li><a class="links cemetery-navItem" href="#about-cemetery"><span>Digital</span> Cemetery</a></li>
+        <li><a class="links" href="#about-cemetery-items">Products</a></li>
         <li><a class="links" href="#contact">Contact</a></li>
-        <!-- <li><button type="submit" class="pricing-button"><a href="pricing.html">Pricing page</a></button></li> -->
-        <li>
-          <ul class="nav-social">
-            <li><a href="#"><img src="iternal/assets/ico/fb-ico.svg" alt="facebook"></a></li>
-            <li><a href="#"><img src="iternal/assets/ico/in-ico.svg" alt="instagram"></a></li>
-            <li><a href="#"><img src="iternal/assets/ico/tw-ico.svg" alt="twitter"></a></li>
-          </ul>
+        <ul class="nav-social">
+          <li><a href="#"><img src="iternal/assets/ico/fb-ico.svg" alt="facebook"></a></li>
+          <li><a href="#"><img src="iternal/assets/ico/in-ico.svg" alt="instagram"></a></li>
+          <li><a href="#"><img src="iternal/assets/ico/tw-ico.svg" alt="twitter"></a></li>
+        </ul>
         </li>
       </ul>
     </div>
@@ -82,9 +80,6 @@
         <h2 class="fade fadeOut">Choose the <span class="hollow">perfect <br> product</span> for you.</h2>
       </div>
     </div>
-  </section>
-
-  <section id="pricing-about">
     <div class="container">
       <div class="pricing-about__wrapper">
         <div class="pricing-about__text fade fadeOut">
@@ -134,234 +129,484 @@
 
   <section id="pricing-cards">
     <div class="container">
+
+      <div class="table">
+        <!-- Table Text -->
+
+        <div class="table-text">
+          <h3 class="text-center">Select your plan</h3>
+          <p class="text-md text-center margin-inline margin-top-1">Besides individual and bundle, you can also choose
+            custom package. <br><span>Manage your plan and billing details below.</span></p>
+
+          <!-- Toggle -->
+
+          <input type="checkbox" name="check" id="switch" class="toggle-input" />
+          <label for="switch" class="toggle-label"></label>
+          <div class="toggle-price">
+            <div class="plan">
+              <div class="space plan-left">
+                <p>Single</p>
+              </div>
+              <div class="space plan-right">
+                <p>Bundle</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Content -->
+          <div class="table-content">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="pricing-card dark-card">
+                      <div class="flex-align">
+                        <small class="pricing-header">iTernal ®</small>
+                        <h3>Digital Tombstone</h3>
+                        <!-- <p class="pricing-sub">Individual Package</p> -->
+                        <p class="pricing-sub-text">In our individual package you can choose color for <span><a
+                              href="#tombstone">Digital Tombstone.</a></span>
+                        </p>
+                        <div class="subprices">
+                          <p class="price-more">Screen size 32"</p>
+                          <div class="price">
+                            <div class="price-item big">
+                              <small>€</small>
+                              <p class="price-tag main">6.000</p>
+                              <small>+tax</small>
+                            </div>
+                          </div>
+
+                          <p class="price-more">More screen sizes:</p>
+
+                          <div class="price">
+                            <p>55"</p>
+                            <div class="price-item">
+                              <small>€</small>
+                              <p class="price-tag">9.000</p>
+                              <small>+tax</small>
+                            </div>
+                          </div>
+
+                          <div class="price">
+                            <p>65"</p>
+                            <div class="price-item">
+                              <small>€</small>
+                              <p class="price-tag">10.000</p>
+                              <small>+tax</small>
+                            </div>
+                          </div>
+
+                          <div class="price">
+                            <p>75"</p>
+                            <div class="price-item">
+                              <small>€</small>
+                              <p class="price-tag">11.000</p>
+                              <small>+tax</small>
+                            </div>
+                          </div>
+
+                          <div class="price special">
+                            <p><a href="#tombstone-special">Special<br>offer</a></p>
+                            <div class="price-item">
+                              <small>€</small>
+                              <p class="price-tag">15.000</p>
+                              <small>+tax</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button><a href="#contact">Order now</a></button>
+                    </div>
+
+                  </th>
+                  <th>
+
+                  </th>
+                </tr>
+              </thead>
+            </table>
+
+          </div>
+
+          <!-- Table Hidden -->
+          <div class="table-content hidden">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="pricing-card dark-card">
+                      <div class="flex-align">
+                        <small class="pricing-header">iTernal ®</small>
+                        <h3>Digital Columbarium</h3>
+                        <!-- <p class="pricing-sub">Bundle Package</p> -->
+                        <p class="pricing-sub-text">In our bundle package you can choose between <span><a
+                              href="#columbarium">Digital
+                              Columbarium</a></span> for 20
+                          or 40 people.</p>
+                        <p class="price-more">For 20 people / 20 nisch</p>
+                        <div class="price">
+                          <div class="price-item big">
+                            <small>€</small>
+                            <p class="price-tag main">40.000</p>
+                            <small>+tax</small>
+                          </div>
+                        </div>
+
+                        <p class="price-more">For 40 people / 40 nisch</p>
+
+                        <div class="price">
+                          <div class="price-item">
+                            <small>€</small>
+                            <p class="price-tag">70.000</p>
+                            <small>+tax</small>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button><a href="#contact">Order now</a></button>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="pricing-card dark-card">
+                      <div class="flex-align">
+                        <small class="pricing-header">iTernal ®</small>
+                        <h3>Digital Memorial Wall</h3>
+                        <!-- <p class="pricing-sub">Bundle Package</p> -->
+                        <p class="pricing-sub-text">In our bundle package you can choose between <span><a
+                              href="#memorial-wall">Digital
+                              Memorial Wall</a></span> for
+                          20 or 40 people.</p>
+                        <p class="price-more">For 20 people / 20 nisch</p>
+                        <div class="price">
+                          <div class="price-item big">
+                            <small>€</small>
+                            <p class="price-tag main">30.000</p>
+                            <small>+tax</small>
+                          </div>
+                        </div>
+
+                        <p class="price-more">For 40 people / 40 nisch</p>
+
+                        <div class="price">
+                          <div class="price-item">
+                            <small>€</small>
+                            <p class="price-tag">40.000</p>
+                            <small>+tax</small>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button><a href="#contact">Order now</a></button>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <!-- <div class="pricing-card dark-card">
+        <div class="flex-align">
+          <small class="pricing-header">iTernal ®</small>
+          <h3>Digital Tombstone</h3>
+          <p class="pricing-sub">Individual Package</p>
+          <p class="pricing-sub-text">In our individual package you can choose color for <span><a
+                href="#tombstone">Digital Tombstone.</a></span>
+          </p>
+          <div class="subprices">
+            <p class="price-more">Screen size 32"</p>
+            <div class="price">
+              <div class="price-item big">
+                <small>€</small>
+                <p class="price-tag main">6.000</p>
+                <small>+tax</small>
+              </div>
+            </div>
+
+            <p class="price-more">More screen sizes:</p>
+
+            <div class="price">
+              <p>55"</p>
+              <div class="price-item">
+                <small>€</small>
+                <p class="price-tag">9.000</p>
+                <small>+tax</small>
+              </div>
+            </div>
+
+            <div class="price">
+              <p>65"</p>
+              <div class="price-item">
+                <small>€</small>
+                <p class="price-tag">10.000</p>
+                <small>+tax</small>
+              </div>
+            </div>
+
+            <div class="price">
+              <p>75"</p>
+              <div class="price-item">
+                <small>€</small>
+                <p class="price-tag">11.000</p>
+                <small>+tax</small>
+              </div>
+            </div>
+
+            <div class="price special">
+              <p><a href="#tombstone-special">Special<br>offer</a></p>
+              <div class="price-item">
+                <small>€</small>
+                <p class="price-tag">15.000</p>
+                <small>+tax</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button><a href="#contact">Order now</a></button>
+
+      </div>
+
       <div class="pricing-card dark-card">
-        <small class="pricing-header">iTernal ®</small>
-        <h3>Digital Tombstone</h3>
-        <p class="pricing-sub">Individual Package</p>
-        <p class="pricing-sub-text">In our individual package you can choose color for <span><a
-              href="#tombstone">Digital Tombstone.</a></span>
-        </p>
-        <div class="subprices">
-          <p class="price-more">Screen size 32"</p>
+        <div class="flex-align">
+          <small class="pricing-header">iTernal ®</small>
+          <h3>Digital Columbarium</h3>
+          <p class="pricing-sub">Bundle Package</p>
+          <p class="pricing-sub-text">In our bundle package you can choose between <span><a href="#columbarium">Digital
+                Columbarium</a></span> for 20
+            or 40 people.</p>
+          <p class="price-more">For 20 people / 20 nisch</p>
           <div class="price">
             <div class="price-item big">
               <small>€</small>
-              <p class="price-tag main">6.000</p>
+              <p class="price-tag main">40.000</p>
               <small>+tax</small>
             </div>
           </div>
 
-          <p class="price-more">More screen sizes:</p>
+          <p class="price-more">For 40 people / 40 nisch</p>
 
           <div class="price">
-            <p>55"</p>
             <div class="price-item">
               <small>€</small>
-              <p class="price-tag">9.000</p>
+              <p class="price-tag">70.000</p>
               <small>+tax</small>
             </div>
           </div>
+        </div>
+
+        <button><a href="#contact">Order now</a></button>
+
+      </div>
+
+      <div class="pricing-card dark-card">
+        <div class="flex-align">
+          <small class="pricing-header">iTernal ®</small>
+          <h3>Digital Memorial Wall</h3>
+          <p class="pricing-sub">Bundle Package</p>
+          <p class="pricing-sub-text">In our bundle package you can choose between <span><a
+                href="#memorial-wall">Digital
+                Memorial Wall</a></span> for
+            20 or 40 people.</p>
+          <p class="price-more">For 20 people / 20 nisch</p>
+          <div class="price">
+            <div class="price-item big">
+              <small>€</small>
+              <p class="price-tag main">30.000</p>
+              <small>+tax</small>
+            </div>
+          </div>
+
+          <p class="price-more">For 40 people / 40 nisch</p>
 
           <div class="price">
-            <p>65"</p>
             <div class="price-item">
               <small>€</small>
-              <p class="price-tag">10.000</p>
+              <p class="price-tag">40.000</p>
               <small>+tax</small>
             </div>
           </div>
-
-          <div class="price">
-            <p>75"</p>
-            <div class="price-item">
-              <small>€</small>
-              <p class="price-tag">11.000</p>
-              <small>+tax</small>
-            </div>
-          </div>
-
-          <!-- <div data-modal-target="modal7" class="price special"> -->
-          <div class="price special">
-            <p><a href="#tombstone-special">Special<br>offer</a></p>
-            <div class="price-item">
-              <small>€</small>
-              <p class="price-tag">15.000</p>
-              <small>+tax</small>
-            </div>
-            <!-- <div class="modal" id="modal7">
-              <div class="modal-content">
-                <span class="modal-close">&times;</span>
-                <h2>Special offer</h2>
-                <img src="iternal/assets/img/iternal1-front.svg" alt="">
-                <img src="iternal/assets/img/iternal1-back.svg" alt="">
-              </div>
-            </div> -->
-          </div>
         </div>
 
-        <button>Buy now</button>
+        <button><a href="#contact">Order now</a></button>
 
-      </div>
-
-      <div class="pricing-card">
-        <small class="pricing-header">iTernal ®</small>
-        <h3>Digital Columbarium</h3>
-        <p class="pricing-sub">Bundle Package</p>
-        <p class="pricing-sub-text">In our bundle package you can choose between <span><a href="#columbarium">Digital
-              Columbarium</a></span> for 20
-          or 40 people.</p>
-        <p class="price-more">For 20 people / 20 nisch</p>
-        <div class="price">
-          <div class="price-item big">
-            <small>€</small>
-            <p class="price-tag main">40.000</p>
-            <small>+tax</small>
-          </div>
-        </div>
-
-        <p class="price-more">For 40 people / 40 nisch</p>
-
-        <div class="price">
-          <div class="price-item">
-            <small>€</small>
-            <p class="price-tag">70.000</p>
-            <small>+tax</small>
-          </div>
-        </div>
-
-        <button>Buy now</button>
-
-      </div>
-
-      <div class="pricing-card">
-        <small class="pricing-header">iTernal ®</small>
-        <h3>Digital Memorial Wall</h3>
-        <p class="pricing-sub">Bundle Package</p>
-        <p class="pricing-sub-text">In our bundle package you can choose between <span><a href="#memorial-wall">Digital
-              Memorial Wall</a></span> for
-          20 or 40 people.</p>
-        <p class="price-more">For 20 people / 20 nisch</p>
-        <div class="price">
-          <div class="price-item big">
-            <small>€</small>
-            <p class="price-tag main">30.000</p>
-            <small>+tax</small>
-          </div>
-        </div>
-
-        <p class="price-more">For 40 people / 40 nisch</p>
-
-        <div class="price">
-          <div class="price-item">
-            <small>€</small>
-            <p class="price-tag">40.000</p>
-            <small>+tax</small>
-          </div>
-        </div>
-
-        <button>Buy now</button>
-
-      </div>
+      </div> -->
 
     </div>
-  </section>
 
-  <!-- ABOUT PART -->
-
-  <section id="about-home">
-    <div class="container">
-      <div class="heading">
-        <h4 class="fade fadeOut">About Us</h4>
-        <h2 class="fade fadeOut">This is <span class="hollow">our</span> story</h2>
-      </div>
-    </div>
-  </section>
-
-  <section id="about-about">
-    <div class="container">
-      <div class="about-about-wrapper">
-        <div class="about-text">
-          <!-- <h3>About <span class="hollow">Us</span></h3> -->
-          <p class="fade fadeOut">Today, information of the deceased and thus of our places is reduced to a name,
-            surname and year of birth
-            and death.</p>
-          <p class="fade fadeOut">
-            Despite today‘s digital age, cemeteries are still in the stone age. <u>For centuries, graves have remained
-              the
-              same;</u> there‘s always a stone slab with only a name and date of birth and death of the deceased. But we
-            don’t
-            want to be anonymous, we all want to leave a trace, we want to be remembered. It‘s in human nature. So, it‘s
-            time to say farewell to the stone age and <u>say hello to the digital age.</u></p>
-          <p class="fade fadeOut">
-          <blockquote>iTernal, our digital tombstone, our digital memorial and our digital columbarium, eliminates this
-            anonymity
-            and gets us more information about the deceased.</blockquote>
-          </p>
-          <p class="fade fadeOut">
-            It’s no longer just a head of the grave, holder of the name or an image of the deceased while it becomes a
-            story of the deceased and calls to eternity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="download">
-    <div class="container">
-      <div class="heading fade fadeOut">
-        <h4 id="cemetery">Segments</h4>
-        <h2>Digital <span class="hollow">cemetery</span></h2>
-        <p>The digital cemetery is a reflection of a new era that has advanced so much with the <u>development of
-            technology</u> that we can also change the millennial patterns of human behaviour.</p>
-        <button>Digital Tombstone</button>
-        <button>Why a Digital Monument?</button>
-      </div>
-      <div class="components fade fadeOut">
-        <h3>Contents</h3>
-        <a href="iternal/assets/files/NADGROVNI SPOMENIK.pdf">Digital tombstone</a>
-        <a href="iternal/assets/files/OSNOVA KOMPLEKSA.pdf">Complex base</a>
-        <a href="iternal/assets/files/SPOMEN ZID.pdf">Memorial wall</a>
-        <a href="iternal/assets/files/ZID URNI.pdf">Columbarium wall</a>
-      </div>
-    </div>
+    <p class="patent fade fadeOut">
+      iTernal is our trademark; it is registered at USPTO Reg. No. 5569783; 3-17-2017 (USA)
+      Provisional Patent Application Number: 63/067,246 <br> Patent status: Patent pending<br><br>
+      <u>Special wishes are possible but will be charged additionally.</u>
+    </p>
   </section>
 
   <section id="about-cemetery">
-    <div class="container">
-      <div class="about-cemetery">
-        <!-- <p class="initial">The digital cemetery is a reflection of a new era that has advanced so much with the development of
-          technology that we can also change the millennial patterns of human behaviour.</p> -->
+    <div class="container expandables-container">
+
+      <div class="heading fade fadeOut">
+        <h4 id="cemetery">Segments</h4>
+        <h2>Digital <span class="hollow">cemetery</span></h2>
+      </div>
+
+      <div class="about-cemetery expandable">
         <p class="initial">Attitudes toward death and the dead have changed radically in most societies by the 21st
           century. But the end
           of life is still understood in the same way as it used to be. Each of us would like to <u>leave something
             behind</u>
           that would remind our descendants that we lived and that <u>we left a TRACE.</u></p>
-        <p class="fade fadeOut"> And unlike in the past, when this was only possible for a group of privileged and
-          wealthy people who could
-          erect monumental monuments ( pyramids, mausoleums, monumental tombs etc. ), <u>today's technology allows this
-            privilege for just
-            about every one of us.</u></p>
-        <p class="fade fadeOut"><b>The digital cemetery consists of classic free-standing digital tombstones, digital
-            cremation niches and a
-            digital memorial wall.</b>
-          <br><br>Each element of this cemetery offers the individual unlimited opportunities to show his
-          life, achievements, joy… in short, everything that anyone wants to say about himself and show to his
-          descendants.
-        </p>
-        <p class="fade fadeOut">A digital cemetery can be part of an existing cemetery, an addition to it, or a
-          completely new cemetery. <u>An
-            integral part of the cemetery is also a small solar power plant</u>, hidden behind a memorial wall and
-          greenery,
-          with green energy supplying the entire complex.
-        </p>
+
+        <div class="expandee">
+          <p> And unlike in the past, when this was only possible for a group of privileged and
+            wealthy people who could
+            erect monumental monuments ( pyramids, mausoleums, monumental tombs etc. ), <u>today's technology allows this
+              privilege for just
+              about every one of us.</u></p>
+          <p><b>The digital cemetery consists of classic free-standing digital tombstones, digital
+              cremation niches and a
+              digital memorial wall.</b>
+            <br><br>Each element of this cemetery offers the individual unlimited opportunities to show his
+            life, achievements, joy… in short, everything that anyone wants to say about himself and show to his
+            descendants.
+          </p>
+          <p>A digital cemetery can be part of an existing cemetery, an addition to it, or a
+            completely new cemetery. <u>An
+              integral part of the cemetery is also a small solar power plant</u>, hidden behind a memorial wall and
+            greenery,
+            with green energy supplying the entire complex.
+          </p>
+        </div>
+        <button class="toggle-button">Read more</button>
+
       </div>
-      <div class="about-cemetery-imgs">
-        <div class="about-cemetery-imgs__top">
-          <img class="fade fadeOut" src="iternal/assets/img/cemetery.webp" alt="">
+      
+      <div class="components fade fadeOut">
+        <h4>Components</h4>
+        <div class="components-wrapper">
+          <a href="iternal/assets/files/NADGROVNI SPOMENIK.pdf">Digital tombstone</a>
+          <a href="iternal/assets/files/OSNOVA KOMPLEKSA.pdf">Complex base</a>
         </div>
-        <div class="about-cemetery-imgs__bot">
-          <img class="fade fadeOut" src="iternal/assets/img/2.webp" alt="">
-          <img class="fade fadeOut" src="iternal/assets/img/3.webp" alt="">
+        <div class="components-wrapper">
+          <a href="iternal/assets/files/SPOMEN ZID.pdf">Memorial wall</a>
+          <a href="iternal/assets/files/ZID URNI.pdf">Columbarium wall</a>
         </div>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-wrapper">
+          <div class="gallery-content">
+            <div class="gallery-item">
+              <img data-modal-target="modal6" src="iternal/assets/img/gallery/1.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal7" src="iternal/assets/img/gallery/2.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal8" src="iternal/assets/img/gallery/3.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal9" src="iternal/assets/img/gallery/4.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal10" src="iternal/assets/img/gallery/5.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal11" src="iternal/assets/img/gallery/6.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal12" src="iternal/assets/img/gallery/7.webp" alt="">
+            </div>
+            <div class="gallery-item">
+              <img data-modal-target="modal13" src="iternal/assets/img/gallery/8.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal6">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/1.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal7">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/2.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal8">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/3.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal9">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/4.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal10">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/5.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal11">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/6.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal12">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/7.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal13">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/8.webp" alt="">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -369,48 +614,60 @@
   <section id="about-cemetery-items">
     <div class="container">
 
-      <div class="about-cemetery-items__item">
+      <div class="about-cemetery-items__item expandables-container">
         <div class="item-header heading fade fadeOut">
           <h4>On Digital Cemetery we will have:</h4>
         </div>
-        <div class="item-content">
-          <!-- <div class="top-dash"></div> -->
+        <div class="item-content expandable">
           <h3 class="fade fadeOut" id="tombstone">Digital Tombstone</h3>
           <blockquote class="fade fadeOut">
             <h4> — a personalized digital tombstone which is flexible and easy to change the content, has unlimited
               space
               and comparable price, as well as personal touch.</h4>
           </blockquote>
-          <p class="fade fadeOut">Today's inscriptions on tombstones are very short; they do not tell us more than just
+          <p>Today's inscriptions on tombstones are very short; they do not tell us more than
+            just
             basic information
             about the deceased or his family.</p>
-          <p class="fade fadeOut">Usually, only the name and two dates remain after your death, but now you have the
-            <u>opportunity to escape</u>
-            from such <u>anonymity</u>. Modern, digital age has brought many new opportunities, both in life and after
-            death,
-            although it may sound a bit strange. In funeral industry, 99% of people use traditional stone tombstone.</p>
-          <p class="fade fadeOut">We can say that cemeteries are still in the Stone Age. Besides physical problems of
-            stone (not flexible,
-            heavy, not easy to be rewritten, has limited space, its letters cannot be enlarged) we cannot avoid the fact
-            that there is <u>no personal and emotional connection</u> between the deceased and his loved ones because
-            <u>stone is
-              cold and impersonal</u>.</p>
-          <p class="fade fadeOut"><b>iTernal represents both changes: physical and emotional, and becomes a personalized
-              digital tombstone which
-              is flexible and easy to change the content, has unlimited space and comparable price, as well as personal
-              touch.</b>
-          </p>
-          <p class="fade fadeOut">
-            Already at the time of your life, you can put on digital tombstone a lot more information about your life,
-            work, hobbies, <u>happy moments and sad events;</u> so that your descendants or just passers-by at the
-            cemetery can
-            <u>get to know you better</u>.
-          </p>
-          <p class="fade fadeOut">
-            In digital age, tombstone is no longer just a head of the grave, holder of the name or an image of the
-            deceased; digital tombstone is <u>no longer just an extended memory</u> of the deceased. It becomes <u>a
-              story of the
-              deceased</u> and calls to eternity.</p>
+          <div class="expandee">
+            <p>Usually, only the name and two dates remain after your death, but now you have the
+              <u>opportunity to escape</u>
+              from such <u>anonymity</u>. Modern, digital age has brought many new opportunities, both in life and
+              after
+              death,
+              although it may sound a bit strange. In funeral industry, 99% of people use traditional stone tombstone.
+            </p>
+            <p>We can say that cemeteries are still in the Stone Age. Besides physical problems
+              of
+              stone (not flexible,
+              heavy, not easy to be rewritten, has limited space, its letters cannot be enlarged) we cannot avoid the
+              fact
+              that there is <u>no personal and emotional connection</u> between the deceased and his loved ones
+              because
+              <u>stone is
+                cold and impersonal</u>.
+            </p>
+            <p><b>iTernal represents both changes: physical and emotional, and becomes a
+                personalized
+                digital tombstone which
+                is flexible and easy to change the content, has unlimited space and comparable price, as well as
+                personal
+                touch.</b>
+            </p>
+            <p>
+              Already at the time of your life, you can put on digital tombstone a lot more information about your
+              life,
+              work, hobbies, <u>happy moments and sad events;</u> so that your descendants or just passers-by at the
+              cemetery can
+              <u>get to know you better</u>.
+            </p>
+            <p>
+              In digital age, tombstone is no longer just a head of the grave, holder of the name or an image of the
+              deceased; digital tombstone is <u>no longer just an extended memory</u> of the deceased. It becomes <u>a
+                story of the
+                deceased</u> and calls to eternity.</p>
+          </div>
+          <button class="toggle-button">Read More</button>
         </div>
       </div>
 
@@ -423,33 +680,29 @@
             <h4 class="fade fadeOut">iTernal 01 – H700xW400xD150 - 36" diagonal of whole Digital Tombstone (32" monitor)
             </h4>
           </div>
-          <p class="fade fadeOut">Diagonal of the entire DT 01 is 36"; diagonal of the display is 32". The screen is
+          <p>Diagonal of the entire DT 01 is 36"; diagonal of the display is 32". The screen is
             combined with the
             protective glass. Between the screen and the glass is a special resin which ensures that the screen does not
             overheat in the heat and does not freeze in the cold.</p>
-          <p class="fade fadeOut">The frame is made of artificial black stone; it stands on a metal frame which gives it
+          <p>The frame is made of artificial black stone; it stands on a metal frame which gives it
             some extra strength
             and stability.</p>
-          <p class="fade fadeOut">Besides display with a computer (designed for over 100.000 hours of operation or over
+          <p>Besides display with a computer (designed for over 100.000 hours of operation or over
             10 years of 24/7
             operation); the housing also includes temperature sensor, light sensor, high power fans & 2pcs heater
             build-in, working temperature between around -25°C and +40°C (with temperature sensor and light sensor DT
             runs very well in high temperature and has a very stable performance; the 2pcs heater makes it run in very
             cold temperature); battery (Li-ion; AGM).
           </p>
-          <p class="fade fadeOut">
+          <p>
             At the rear of the housing is a small door for access to the screen and the computer. The computer program
             is complemented by software. DT 01 weighs around 50 kg and is powered via the 220V cable (option: via solar
             panel).
           </p>
-          <p class="patent fade fadeOut">
-            iTernal is our trademark; it is registered at USPTO Reg. No. 5569783; 3-17-2017 (USA)
-            Provisional Patent Application Number: 63/067,246 Patent status: Patent pending
-          </p>
-          <p data-modal-target="modal6" class="specs fade fadeOut">View specifications <span class="arrow">
+          <p data-modal-target="modal14" class="specs fade fadeOut">View full specifications <span class="arrow">
               <img src="iternal/assets/ico/arrow_b_right.svg" alt="">
             </span></p>
-          <div class="modal" id="modal6">
+          <div class="modal" id="modal14">
             <div class="modal-content">
               <span class="modal-close">&times;</span>
               <h4>iTernal 01 – H700xW400xD150 - 36" <br>diagonal of whole Digital Tombstone (32" monitor)</h4>
@@ -460,101 +713,259 @@
             </div>
           </div>
         </div>
+
+        <div class="gallery">
+          <div class="gallery-wrapper">
+            <div class="gallery-content">
+              <div class="gallery-item">
+                <img data-modal-target="modal15" src="iternal/assets/img/gallery/9.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal16" src="iternal/assets/img/gallery/10.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal17" src="iternal/assets/img/gallery/11.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal18" src="iternal/assets/img/gallery/12.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal15">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/9.webp" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal16">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/10.webp" alt="">
+              <p>Cemetery in Maribor, Slovenia, 2017</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal17">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/11.webp" alt="">
+              <p>Cemetery in Indiana, USA, 2018</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal18">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-content__imgs">
+              <img src="iternal/assets/img/gallery/12.webp" alt="">
+              <p>Cemetery in Žalec, Slovenia, 2020</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="about-cemetery-items__item">
-        <div class="item-content">
-          <!-- <div class="top-dash"></div> -->
+      <div class="about-cemetery-items__item expandables-container">
+        <div class="item-content expandable">
           <h3 class="fade fadeOut" id="columbarium">Digital Columbarium</h3>
           <blockquote class="fade fadeOut">
             <h4> — world’s first innovative, future oriented and completely digital Columbarium for 40 cremation niches.
             </h4>
           </blockquote>
-          <p class="fade fadeOut">iTernal is not integrated into a classic Columbarium (but it can be); it is a complete
+          <p>iTernal is not integrated into a classic Columbarium (but it can be); it is a complete
             Columbarium for 40
             digital cremation niches that <u>works in all weather conditions</u> and parts of the day.</p>
-          <p class="fade fadeOut">iTernal is basically a digital function system.
-            <u>The concept of lost</u> – death, funeral, cemetery, grave, tombstone, and columbarium is <u>not easy to
-              deal with</u>
-            by the majority of people.
-          </p>
-          <p class="fade fadeOut">We most likely don't discuss about those things and ignore them because they are
-            linked to emotional pain
-            and loss. Besides that this is the area of a very traditional and conservative thinking. So, with a digital
-            columbarium we’re <u>breaking those taboos and tradition</u>. </p>
-          <p class="fade fadeOut">
-            By the looks, iTernal is very much alike the traditional stone columbarium.</p>
-          <p class="fade fadeOut">The display is integrated in the frame (natural stone or imitation of marble); being
-            on standby only the
-            name and dates of birth and death of the deceased are seen. When one stands in front of the iTernal for a
-            few seconds <u>the motion sensor activates the content</u> of digital columbarium (photos, texts and
-            videos).</p>
-          <p class="fade fadeOut">iTernal, our digital columbarium, can be of <u>any shapes and sizes</u>, different
-            quality, adapted to various
-            weather conditions, equipped with security features, motion sensor, audio and off-the-grid capabilities,
-            advanced human-computer interfaces, it is wireless, powered with solar or 110/220V energy.
-          </p>
-          <div class="about-cemetery-imgs">
-            <div class="about-cemetery-imgs__top">
-              <img class="fade fadeOut" src="iternal/assets/img/col1.jpg" alt="">
-              <img class="fade fadeOut" src="iternal/assets/img/col2.jpg" alt="">
+          <div class="expandee">
+            <p>iTernal is basically a digital function system.
+              <u>The concept of lost</u> – death, funeral, cemetery, grave, tombstone, and columbarium is <u>not easy to
+                deal with</u>
+              by the majority of people.
+            </p>
+            <p>We most likely don't discuss about those things and ignore them because they are
+              linked to emotional pain
+              and loss. Besides that this is the area of a very traditional and conservative thinking. So, with a digital
+              columbarium we’re <u>breaking those taboos and tradition</u>. </p>
+            <p>
+              By the looks, iTernal is very much alike the traditional stone columbarium.</p>
+            <p>The display is integrated in the frame (natural stone or imitation of marble); being
+              on standby only the
+              name and dates of birth and death of the deceased are seen. When one stands in front of the iTernal for a
+              few seconds <u>the motion sensor activates the content</u> of digital columbarium (photos, texts and
+              videos).</p>
+            <p>iTernal, our digital columbarium, can be of <u>any shapes and sizes</u>, different
+              quality, adapted to various
+              weather conditions, equipped with security features, motion sensor, audio and off-the-grid capabilities,
+              advanced human-computer interfaces, it is wireless, powered with solar or 110/220V energy.
+            </p>
+          </div>
+          <button class="toggle-button">Read More</button>
+
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-wrapper">
+            <div class="gallery-content">
+              <div class="gallery-item">
+                <img data-modal-target="modal19" src="iternal/assets/img/columbarium1.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal20" src="iternal/assets/img/columbarium2.webp" alt="">
+              </div>
             </div>
+
+            <div class="modal" id="modal19">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/columbarium1.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal20">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/columbarium2.webp" alt="">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
 
-      <div id="story" class="about-cemetery-items__item">
-        <div class="item-content">
-          <!-- <div class="top-dash"></div> -->
+      <div id="story" class="about-cemetery-items__item expandables-container">
+        <div class="item-content expandable">
           <h3 class="fade fadeOut" id="memorial-wall">Digital Memorial Wall</h3>
           <blockquote class="fade fadeOut">
             <h4>— a system of merged individual digital monuments with a selection of information, images and videos
               about
               the deceased and / or events.</h4>
           </blockquote>
-          <p class="fade fadeOut">iTernal is world’s first <u>innovative, future oriented and completely
+          <p>iTernal is world’s first <u>innovative, future oriented and completely
               personalized</u> Digital Memorial Wall that
             works in all weather conditions and parts of the day.</p>
-          <p class="fade fadeOut">In fact, iTernal is <u>a system of merged individual digital monuments</u> with a
-            selection of information, images
-            and videos about the deceased and / or events.</p>
-          <p class="fade fadeOut">It represents direct personal and emotional connection between the deceased, past
-            events and today's public
-            (relatives, visitors, tourists, students …). For the first time, <u>it enables that we take care of people
-              and
-              events that are important</u> for past, present and future generations.</p>
-          <p class="fade fadeOut">With a selection of images and more information about them, iTernal becomes a story of
-            the deceased and the
-            past events.</p>
-          <p class="fade fadeOut">The history of a place is not only the dates and events that are important for the
-            city. <u>The past and
-              present are created by people</u>, each with their own story, a part of the whole.
-          </p>
-          <p class="fade fadeOut">The digital era which has not yet paved the way to the cemetery, enables today that we
-            maintain the stories
-            of people who lived and created the image of our places. Each in their own way, they help to shape the
-            history.
-          </p>
-          <p class="fade fadeOut">
-          <blockquote>"The life of the dead is placed in the memory of the living."<br><i>(Cicero)</i></blockquote>
-          </p>
-
-          <div class="about-cemetery-imgs">
-            <div class="about-cemetery-imgs__top">
-              <img class="fade fadeOut" src="iternal/assets/img/wall1.webp" alt="">
-              <img class="fade fadeOut" src="iternal/assets/img/wall2.webp" alt="">
-            </div>
-            <div class="about-cemetery-imgs__bot more-pics">
-              <img class="fade fadeOut" src="iternal/assets/img/wall3.webp" alt="">
-              <img class="fade fadeOut" src="iternal/assets/img/wall4.webp" alt="">
-              <img class="fade fadeOut" src="iternal/assets/img/wall5.webp" alt="">
-              <img class="fade fadeOut" src="iternal/assets/img/wall6.webp" alt="">
-            </div>
+          <div class="expandee">
+            <p>In fact, iTernal is <u>a system of merged individual digital monuments</u> with a
+              selection of information, images
+              and videos about the deceased and / or events.</p>
+            <p>It represents direct personal and emotional connection between the deceased, past
+              events and today's public
+              (relatives, visitors, tourists, students …). For the first time, <u>it enables that we take care of people
+                and
+                events that are important</u> for past, present and future generations.</p>
+            <p>With a selection of images and more information about them, iTernal becomes a story of
+              the deceased and the
+              past events.</p>
+            <p>The history of a place is not only the dates and events that are important for the
+              city. <u>The past and present are created by people</u>, each with their own story, a part of the whole.
+            </p>
+            <p>The digital era which has not yet paved the way to the cemetery, enables today that we
+              maintain the stories
+              of people who lived and created the image of our places. Each in their own way, they help to shape the
+              history.
+            </p>
+            <p>
+            <blockquote class="fade fadeOut block">"The life of the dead is placed in the memory of the
+              living."<br><i>(Cicero)</i></blockquote>
+            </p>
           </div>
+          <button class="toggle-button">Read More</button>
+        </div>
 
+        <div class="gallery">
+          <div class="gallery-wrapper">
+            <div class="gallery-content">
+              <div class="gallery-item">
+                <img data-modal-target="modal21" src="iternal/assets/img/wall5.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal22" src="iternal/assets/img/wall6.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal23" src="iternal/assets/img/wall3.webp" alt="">
+              </div>
+              <div class="gallery-item">
+                <img data-modal-target="modal24" src="iternal/assets/img/wall4.webp" alt="">
+              </div>
+              <div class="gallery-item__item">
+                <div class="gallery-item">
+                  <img data-modal-target="modal25" src="iternal/assets/img/wall1.webp" alt="">
+                </div>
+                <div class="gallery-item">
+                  <img data-modal-target="modal26" src="iternal/assets/img/wall2.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal21">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall5.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal22">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall6.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal23">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall3.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal24">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall4.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal25">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall1.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal26">
+              <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content__imgs">
+                  <img src="iternal/assets/img/wall2.webp" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -581,14 +992,11 @@
 
       <div class="footer-links">
         <hr>
-        <!-- <h4>Links</h4> -->
         <ul>
           <li><a href="#pricing-home">Home</a></li>
           <li><a href="#pricing-cards">Pricing</a></li>
-          <li><a href="#pricing-about">About</a></li>
-          <li><a class="links" href="#cemetery">Products</a></li>
-          <!-- <li><a href="#faq">FAQ<small>s</small></a></li> -->
-          <!-- <li><a href="#download">Downloads</a></li> -->
+          <li><a class="cemetery-navItem" href="#about-cemetery"><span>Digital</span> Cemetery</a></li>
+          <li><a href="#about-cemetery-items">Products</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>

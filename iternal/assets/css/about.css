@@ -1,8 +1,3 @@
-#about-page p:not(.footer-contact__heading p, .footer-bottom p) {
-    max-width: initial;
-    text-align: left;
-}
-
 .item-content h3,
 .item-content h4,
 .about-text p:first-child {
@@ -13,6 +8,10 @@
     text-transform: none;
     font-size: 1.8rem;
     margin: 1rem auto;
+}
+
+.about-about-wrapper {
+    margin-top: 2rem;
 }
 
 .about-about-wrapper h3,
@@ -100,6 +99,8 @@
     font-style: italic;
     line-height: 1.2rem;
     color: var(--color-teriary);
+    margin-inline: auto;
+    text-align: center;
 }
 
 .footer-bottom p {
