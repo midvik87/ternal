@@ -92,7 +92,6 @@ blockquote {
     font-weight: 600;
     font-size: larger;
     color: var(--color-teriary-hover);
-    /* quotes: '«' '»'; */
 }
 
 hr {
@@ -125,7 +124,6 @@ h3 {
 
 h4 {
     line-height: 29px;
-    /* letter-spacing: 1px; */
     font-weight: var(--font-w-bold);
     font-size: var(--text-h4);
     text-transform: uppercase;
@@ -135,22 +133,14 @@ h4 {
     font-weight: var(--font-w-medium);
 }
 
-/* button {
-    font-size: var(--text-h5);
-    padding: 0.7rem 1.3rem;
-    border-radius: var(--border-radius-button);
-    border: 1px solid transparent;
-    background-color: var(--color-monet);
-    color: var(--color-secondary);
-    box-shadow: var(--color-box-shadow);
-    transition: var(--transition);
-    cursor: pointer;
-    letter-spacing: 1px;
-    font-weight: var(--font-w-bold);
-} */
 button {
+    border: none;
+    background-color: inherit;
+}
+
+.button {
     font-size: var(--text-h5);
-    padding: 0.7rem 1.3rem;
+    padding: 0.5rem 1.4rem;
     border-radius: var(--border-radius-button);
     border: 1px solid transparent;
     background-color: var(--color-monet);
@@ -164,13 +154,13 @@ button {
     font-weight: var(--font-w-regular);
 }
 
-button:hover {
+.button:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: 1px solid var(--color-secondary-hover);
 }
 
-button:active {
+.button:active {
     background-color: var(--color-monet-pressed);
 }
 
@@ -274,7 +264,6 @@ img {
     background-image: url("../ico/arrow_b_upTop.svg");
     background-repeat: no-repeat;
     background-color: rgba(240, 240, 240, 0.4);
-    /* background-size: cover; */
 }
 
 #toTop:hover {
@@ -291,7 +280,6 @@ img {
     border: 1px solid black;
     border-radius: 20px 0 0 20px;
     z-index: 9999;
-    /* display: none; */
 }
 
 .show {
@@ -324,14 +312,6 @@ img {
 .fade {
     transition: opacity 0.7s ease-in;
 }
-
-/* .fadeOut {
-    opacity: 0;
-}
-
-.fadeIn {
-    opacity: 1;
-} */
 
 .fadeOut {
     opacity: 0;
@@ -607,13 +587,6 @@ footer .container::after {
     text-decoration: underline;
 }
 
-/* .social p span {
-    height: 1px;
-    width: 50px;
-    margin-left: 15px;
-    background-color: var(--color-secondary);
-} */
-
 .social-link img {
     width: 1.2rem;
     height: 1.2rem;
@@ -624,11 +597,6 @@ footer .container::after {
 .social-link img:hover {
     transform: scale(1.1);
 }
-
-/* .arrow {
-    display: none;
-    justify-content: center;
-} */
 
 .shade {
     position: absolute;
@@ -668,7 +636,7 @@ footer .container::after {
     text-align: left;
 }
 
-.item-content{
+.item-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -771,22 +739,13 @@ footer .container::after {
 }
 
 @media (min-width: 1200px) {
-    
+
     .about-text,
     .about-cemetery,
     .item-content {
         columns: 3;
     }
 }
-
-/* @media (min-width: 1400px) {
-
-    .about-text,
-    .about-cemetery,
-    .item-content {
-        columns: 3;
-    }
-} */
 
 /* end side css */
 
@@ -865,7 +824,7 @@ footer .container::after {
     box-shadow: var(--color-box-shadow);
 }
 
-.about-slider-card img:hover + figcaption  {
+.about-slider-card img:hover+figcaption {
     color: var(--color-monet);
 }
 
@@ -887,7 +846,6 @@ footer .container::after {
     display: none;
     justify-content: center;
     align-items: center;
-    /* or center */
     z-index: 11;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
@@ -932,11 +890,6 @@ footer .container::after {
     font-size: 1.75rem;
     font-weight: bold;
     padding: 0 0.75rem;
-    /* width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     user-select: none;
@@ -961,7 +914,6 @@ footer .container::after {
     margin: 1rem 0;
     line-height: 1.5rem;
     margin-inline: auto;
-    /* max-width: initial; */
 }
 
 .modal-content__left {
@@ -994,9 +946,11 @@ footer .container::after {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .modal-content__imgs img {
     max-height: 80vh;
 }
+
 /* Animations */
 @keyframes fadeIn {
     0% {
@@ -1065,37 +1019,15 @@ footer .container::after {
 /*                  PRICING                       */
 /* ********************************************** */
 
-/* .prices-card {
-    border-radius: var(--border-radius);
-    background-color: var(--color-background-card);
-    padding: 1rem;
-    margin: 1rem auto;
-    box-shadow: var(--color-box-shadow);
-}
-
-.prices-card p {
-    padding: 0 1rem;
-} */
-
-/* #pricing .heading p,
-#pricing .heading a {
-    margin-left: 0;
-    text-align: left;
-} */
-
 .prices-wrapper {
     margin-top: 3.5rem;
 }
 
 .prices-card {
-    /* --color-primary: #f0f0f0;
-    --color-background-card: #262626; */
-
     flex-direction: row;
     max-width: 30rem;
     margin-inline: auto;
     border-radius: var(--border-radius);
-    /* background-color: var(--color-background-card); */
     padding: .5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -1103,9 +1035,6 @@ footer .container::after {
 }
 
 .prices-card {
-    /* --color-primary: #f0f0f0;
-    --color-background-card: #262626; */
-
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
@@ -1255,8 +1184,6 @@ span.details {
 }
 
 #faq .container {
-    /* background-color: rgb(221, 221, 221); */
-    /* max-width: 100vw; */
     padding-bottom: 5rem;
 }
 
@@ -1282,20 +1209,18 @@ span.details {
 .components h4 {
     text-decoration: underline;
 }
+
 .components h4 {
     font-size: 1.5rem;
     margin-top: 1rem;
 }
 
 .components a {
-    /* justify-content: flex-start; */
     text-decoration: none;
     position: relative;
     align-items: center;
     padding-left: 2rem;
     margin: .5rem 0;
-    /* text-align: left;
-    max-width: 250px; */
     text-transform: uppercase;
     font-weight: var(--font-w-bold);
 }
@@ -1374,8 +1299,6 @@ form button {
 form input,
 form textarea {
     margin: 0.2rem 0;
-    /* border: 1px solid var(--input-border); */
-    /* border-radius: var(--input-radius); */
     border: 1px solid var(--color-secondary);
     border-left: none;
     border-top: none;
@@ -1391,7 +1314,6 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    /* background-color: var(--color-primary-hover); */
     border-bottom: 1px solid var(--color-monet);
     color: var(--color-secondary);
 }
@@ -1532,10 +1454,6 @@ form textarea:focus::placeholder {
         text-align: center;
     }
 
-    .main {
-        font-size: 80px;
-    }
-
     .patent {
         max-width: 85%;
     }
@@ -1582,7 +1500,6 @@ form textarea:focus::placeholder {
 
     .footer-contact {
         flex-direction: row-reverse;
-        /* align-items: center; */
     }
 
     .footer-contact__heading h3,

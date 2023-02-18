@@ -18,16 +18,13 @@ section .container::after {
 /* Text Styling ------------------------------------- */
 
 .expandable {
-    /* border: 1px solid #000; */
     margin-bottom: 1em;
 }
 
-/* Hides all the expandees */
 .expandable .expandee {
     display: none;
 }
 
-/* Shows the expandee when .expanded is added to the parent of expandee */
 .expanded .expandee {
     display: block;
 }
@@ -37,18 +34,13 @@ section .container::after {
     margin-inline: auto;
     background-color: white;
     color: var(--color-primary);
-    border-radius: 0;
     border-top: 1px solid var(--color-background-card);
-    border-inline: none;
-    border-bottom: none;
     width: 180px;
     box-shadow: none;
 }
 
 .toggle-button:hover {
     border-top: 1px solid var(--color-primary);
-    border-inline: none;
-    border-bottom: none;
 }
 
 @media (min-width: 768px) {
@@ -153,17 +145,12 @@ section .container::after {
     justify-content: space-between;
 }
 
-/* .plan-left {
-    width: 1.9rem;
-  } */
 .plan-left img {
     position: relative;
     bottom: 0.4rem;
-    /* left: 0.09rem; */
 }
 
 .plan-right {
-    /* width: 9rem; */
     text-align: start;
 }
 
@@ -226,14 +213,12 @@ section .container::after {
 
 .table-text span {
     font-weight: 600;
-    /* display: block; */
 }
 
 .toggle-price {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-inline: 14%; */
 }
 
 .hidden {
@@ -290,25 +275,6 @@ tbody td {
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* nav item fix */
 
 .cemetery-navItem {
@@ -344,12 +310,6 @@ b {
     line-height: 2rem;
 }
 
-/* b,
-u {
-    color: var(--color-teriary-hover);
-    font-weight: 600;
-} */
-
 #pricing-home {
     margin-bottom: 0;
 }
@@ -357,6 +317,13 @@ u {
 .pricing-about__products h4,
 #pricing-cards .container {
     text-align: left;
+}
+
+#pricing-cards .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .pricing-about__wrapper,
@@ -388,17 +355,6 @@ u {
     text-align: left;
     position: relative;
 }
-
-/* .pricing-about__products ul li::after {
-    content: '';
-    position: absolute;
-    left: -21px;
-    top: 2px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 1px solid var(--color-monet);
-} */
 
 .pricing-about__products ul li::marker {
     font-weight: bold;
@@ -480,7 +436,6 @@ u {
     width: 125px;
     height: 25px;
     font-size: 11px;
-    /* background-color: var(--color-primary); */
     background-color: white;
     padding-left: 10px;
 }
@@ -498,7 +453,6 @@ u {
 .pricing-card button a {
     color: var(--color-secondary);
     text-decoration: none;
-    padding: 0rem 2rem;
     display: block;
 }
 
@@ -513,8 +467,6 @@ u {
     padding-inline: .4rem;
     margin: 4rem auto;
     border-radius: var(--border-radius);
-    /* outline: 1px solid; */
-    /* box-shadow: var(--color-box-shadow); */
     box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -530,7 +482,6 @@ u {
     margin: 0;
     font-size: 30px;
     font-weight: bold;
-    /* line-height: 20px; */
 }
 
 .special::before,
@@ -550,7 +501,6 @@ u {
 }
 
 .price-more {
-    /* margin-top: 3rem; */
     margin-bottom: 15px;
 }
 
@@ -578,7 +528,6 @@ u {
     background-color: var(--color-primary);
 }
 
-/* .pricing-card .price-item p.main, */
 .pricing-card h3 {
     color: var(--color-secondary);
     text-align: center;
@@ -598,10 +547,6 @@ u {
     align-items: center;
     padding-inline: 1rem;
     max-width: 100%;
-}
-
-#tombstone-gallery .gallery-content {
-    flex-wrap: nowrap;
 }
 
 .gallery-content {
@@ -652,25 +597,6 @@ u {
     margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-    .pricing-about__products {
-        flex-direction: row;
-    }
-
-    .gallery-item img {
-        max-height: 350px;
-    }
-}
-
-@media (min-width: 992px) {
-
-    #pricing-cards .container {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-}
-
 @media (min-width: 576px) {
     .gallery-item {
         flex: 1 1 33%;
@@ -683,6 +609,14 @@ u {
     #story .gallery-item {
         flex-basis: min-content;
     }
+
+    #tombstone-gallery .gallery-content {
+        flex-wrap: nowrap;
+    }
+
+    .main {
+        font-size: 4.5rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -691,13 +625,18 @@ u {
         flex-wrap: wrap;
     }
 
+    .pricing-about__products {
+        flex-direction: row;
+    }
+
+    .gallery-item img {
+        max-height: 350px;
+    }
+
+}
+
+@media (min-width: 992px) {
     .pricing-card {
-        max-width: 80%;
+        max-width: 32%;
     }
 }
-
-
-/* @media (min-width: 1200px) {
-}
-@media (min-width: 1400px) {
-} */
