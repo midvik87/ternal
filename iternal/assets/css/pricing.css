@@ -511,7 +511,7 @@ u {
     padding-top: 2rem;
     padding-bottom: .5rem;
     padding-inline: .4rem;
-    margin: 4rem 0;
+    margin: 4rem auto;
     border-radius: var(--border-radius);
     /* outline: 1px solid; */
     /* box-shadow: var(--color-box-shadow); */
@@ -674,10 +674,6 @@ u {
 
     #story .gallery-item {
         flex-basis: min-content;
-    }
-
-    .pricing-card {
-        margin-inline: auto;
     }
 }
 
