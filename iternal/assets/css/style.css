@@ -140,7 +140,7 @@ button {
 
 .button {
     font-size: var(--text-h5);
-    padding: 0.5rem 1.4rem;
+    padding: 0.4rem 1.4rem;
     border-radius: var(--border-radius-button);
     border: 1px solid transparent;
     background-color: var(--color-monet);
