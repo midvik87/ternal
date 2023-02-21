@@ -1,0 +1,367 @@
+/* NAV COLORS */
+nav {
+  background-color: transparent;
+}
+
+.logo a {
+  color: var(--color-primary);
+}
+
+.link-home {
+  visibility: hidden;
+}
+
+.links,
+.nav-social li:nth-child(1),
+.nav-social li:nth-child(2),
+.nav-social li:nth-child(3) {
+  color: var(--color-secondary-hover);
+}
+
+.pricing-button,
+.links {
+  text-shadow: 1px 1px 2px #000;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.active,
+.links:hover {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.links::before {
+  background-color: var(--color-monet-hover);
+}
+
+.hamburger div {
+  background: var(--color-primary);
+}
+
+.hamburger {
+  box-shadow: var(--color-box-shadow);
+}
+
+.toggle {
+  border: 1px solid var(--color-background-nav) !important;
+  background-color: var(--color-background-nav) !important;
+}
+
+.toggle .line1,
+.toggle .line2,
+.toggle .line3 {
+  background-color: var(--color-secondary) !important;
+  border: none;
+}
+
+.hamburger div {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    background: var(--color-background-nav);
+  }
+
+  .links:hover {
+    color: var(--color-white);
+  }
+}
+
+/* END NAV COLORS */
+
+/* NAV STYLES */
+
+.links {
+  font-weight: var(--font-w-regular);
+}
+
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0px;
+  font-weight: 600;
+  height: 4rem;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+/*Styling logo*/
+.logo {
+  padding: 1vh 1vw;
+  text-align: center;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a img {
+  display: block;
+  width: 50px;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  --padding: 1rem;
+  position: relative;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.links {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+
+.links::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  bottom: 0.7rem;
+  position: absolute;
+  transition: all 150ms ease-in-out;
+  margin: 0 0 0 10%;
+}
+
+.links:hover::before {
+  width: 80%;
+}
+
+.pricing-button {
+  border: transparent;
+  background-color: transparent;
+  height: 40px;
+}
+
+
+.pricing-button:hover {
+  transition: all ease-in-out 350ms;
+}
+
+.pricing-button a:hover {
+  color: var(--color-primary);
+}
+
+.pricing-button a {
+  color: var(--color-secondary-hover);
+  background-color: transparent;
+  border: 1px solid var(--color-monet);
+  text-decoration: none;
+}
+
+/*Styling Hamburger Icon*/
+
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*Stying for small screens*/
+@media (max-width: 768px) {
+  .pause-scrolling {
+    overflow: hidden;
+  }
+
+  nav {
+    justify-content: flex-start;
+    position: fixed;
+  }
+
+  .pricing-button,
+  .links {
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    padding: 0.3rem;
+    background-color: transparent;
+    border-radius: 5px;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  /* .logo a {
+    display: none;
+  } */
+
+  .logo img {
+    width: 3rem;
+    height: 3.5rem;
+    margin-left: 10px;
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 0;
+    top: -20px;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 150ms ease-out;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    clip-path: circle(2000px at 90% -10%);
+    -webkit-clip-path: circle(2000px at 90% -10%);
+    pointer-events: all;
+    touch-action: none;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  :root {
+    --link-delay: 50ms;
+    --link-transition: 150ms;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all var(--link-transition) ease 100ms;
+  }
+
+  .nav-links li:nth-child(2) {
+    transition: all var(--link-transition) ease 150ms;
+  }
+
+  .nav-links li:nth-child(3) {
+    transition: all var(--link-transition) ease 200ms;
+  }
+
+  .nav-links li:nth-child(4) {
+    transition: all var(--link-transition) ease 250ms;
+  }
+
+  .nav-links li:nth-child(5) {
+    transition: all var(--link-transition) ease 300ms;
+  }
+
+  .nav-links li:nth-child(6) {
+    transition: all var(--link-transition) ease 350ms;
+    margin: 0;
+  }
+
+  .nav-social li a {
+    display: flex;
+    padding: 10px;
+    transition: all 150ms ease-in-out;
+    border-radius: 50%;
+  }
+
+  .nav-social li a:hover {
+    transform: scale(1.2);
+  }
+
+  .nav-social li a::before {
+    display: none;
+  }
+
+  .nav-social li a img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .nav-social li:nth-child(1) {
+    transition: all var(--link-transition) ease 600ms;
+  }
+
+  .nav-links ul li:nth-child(1),
+  .nav-links ul li:nth-child(2),
+  .nav-links ul li:nth-child(3) {
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-social li:nth-child(2) {
+    transition: all var(--link-transition) ease 650ms;
+  }
+
+  .nav-social li:nth-child(3) {
+    transition: all var(--link-transition) ease 700ms;
+  }
+
+  .nav-social {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+@media (min-width: 768px) {
+
+  .nav-social {
+    display: none;
+  }
+
+  .nav-links {
+    justify-content: flex-end;
+  }
+
+  .login-button,
+  .pricing-button {
+    margin-left: 15px;
+  }
+}
+
+/* END NAV STYLES */
