@@ -7,6 +7,10 @@ nav {
   color: var(--color-primary);
 }
 
+.link-home {
+  visibility: hidden;
+}
+
 .links,
 .nav-social li:nth-child(1),
 .nav-social li:nth-child(2),

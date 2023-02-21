@@ -130,6 +130,9 @@ const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
 const modals = document.querySelectorAll(".modal");
 const modalCloseButtons = document.querySelectorAll(".modal-close");
 
+const arr = Array.from(modalTriggerButtons);
+console.log(arr);
+
 modalTriggerButtons.forEach(elem => {
   elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
 });
@@ -152,16 +155,16 @@ document.addEventListener("keydown", event => {
 function toggleModal(modalId) {
   const modal = document.getElementById(modalId);
 
-  if (getComputedStyle(modal).display === "flex") { // alternatively: if(modal.classList.contains("modal-show"))
+  if (getComputedStyle(modal).display === "flex") {
     modal.classList.add("modal-hide");
     setTimeout(() => {
-      document.body.style.overflow = "initial"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown - in this case: "initial" <=> "visible"
+      document.body.style.overflow = "initial";
       modal.classList.remove("modal-show", "modal-hide");
       modal.style.display = "none";
     }, 200);
   }
   else {
-    document.body.style.overflow = "hidden"; // Optional: in order to enable/disable page scrolling while modal is hidden/shown
+    document.body.style.overflow = "hidden";
     modal.style.display = "flex";
     modal.classList.add("modal-show");
   }
